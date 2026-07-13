@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Database</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #262626;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        /* Search Section */
+        .search-container {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: 2px solid #444;
+            border-radius: 8px;
+            background-color: #262626;
+            color: #fff;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-bar:focus {
+            border-color: #00bcd4;
+        }
+
+        /* Tabs Navigation */
+        .tabs-nav {
+            display: flex;
+            background-color: #333333;
+            border-bottom: 2px solid #444;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 15px 20px;
+            background: none;
+            border: none;
+            color: #aaa;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .tab-btn:hover {
+            color: #fff;
+            background-color: #3d3d3d;
+        }
+
+        /* Active tab styling */
+        .tab-btn.active {
+            color: #00bcd4; /* Sleek cyan accent color */
+            background-color: #262626;
+            border-bottom: 3px solid #00bcd4;
+        }
+
+        /* Tab Content Area */
+        .tab-content {
+            padding: 30px;
+        }
+
+        .content-panel {
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.5s ease;
+        }
+
+        /* Show the active panel */
+        .content-panel.active {
+            display: block;
+        }
+
+        /* Character Card Flex Layout */
+        .character-card {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        /* Intro Styling */
+        .intro-content {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .intro-content h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #00bcd4;
+        }
+
+        .intro-content p {
+            font-size: 18px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* Character Image */
+        .char-image {
+            width: 250px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #444;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        /* Character Info */
+        .char-info h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #00bcd4;
+        }
+
+        .char-info h3 {
+            font-size: 18px;
+            color: #ffa502;
+            margin-bottom: 15px;
+        }
+
+        .char-info p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .character-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .char-image {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="search-container">
+    <input type="text" id="searchBar" class="search-bar" placeholder="Search characters (e.g., Pomni, Iron Man)..." onkeyup="filterSearch()">
+</div>
+
+<div class="container">
+    <div class="tabs-nav" id="tabsNav">
+        <button class="tab-btn active" id="btn-intro" onclick="openTab(event, 'intro')">Welcome</button>
+        <button class="tab-btn" id="btn-ironman" onclick="openTab(event, 'ironman')">Iron Man</button>
+        <button class="tab-btn" id="btn-pomni" onclick="openTab(event, 'pomni')">Pomni</button>
+    </div>
+
+    <div class="tab-content">
+        
+        <div id="intro" class="content-panel active">
+            <div class="intro-content">
+                <h1>Character Universe</h1>
+                <p>Welcome to the ultimate character hub! Use the tabs above to explore different characters, or use the search bar to find your favorites instantly.</p>
+            </div>
+        </div>
+        
+        <div id="ironman" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/250x350" alt="Iron Man" class="char-image">
+                <div class="char-info">
+                    <h2>Iron Man</h2>
+                    <h3>Tony Stark</h3>
+                    <p>Genius, billionaire, playboy, philanthropist. Powered by his Arc Reactor and a series of high-tech armored suits, Tony Stark defends the world as Iron Man, proving that heroes are made, not born.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="pomni" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/250x350" alt="Pomni" class="char-image">
+                <div class="char-info">
+                    <h2>Pomni</h2>
+                    <h3>The Amazing Digital Circus</h3>
+                    <p>After putting on a strange VR headset, a human woman becomes trapped in a chaotic digital circus world and is transformed into a jester-like character named Pomni. She now spends her time trying to find an exit while keeping her sanity intact.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // Function to handle manual tab switching
+    function openTab(evt, tabId) {
+        const panels = document.getElementsByClassName("content-panel");
+        for (let i = 0; i < panels.length; i++) {
+            panels[i].classList.remove("active");
+        }
+
+        const buttons = document.getElementsByClassName("tab-btn");
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove("active");
+        }
+
+        document.getElementById(tabId).classList.add("active");
+        if (evt) {
+            evt.currentTarget.classList.add("active");
+        } else {
+            document.getElementById('btn-' + tabId).classList.add("active");
+        }
+    }
+
+    // Function for Search Bar logic
+    function filterSearch() {
+        const input = document.getElementById('searchBar').value.toLowerCase();
+        
+        // Character names tied to their respective tab IDs
+        const characters = [
+            { name: "iron man", id: "ironman" },
+            { name: "tony stark", id: "ironman" },
+            { name: "pomni", id: "pomni" },
+            { name: "tadc", id: "pomni" }
+        ];
+
+        // Hide or show top navigation tab buttons based on search text
+        const ironBtn = document.getElementById('btn-ironman');
+        const pomniBtn = document.getElementById('btn-pomni');
+
+        // If search bar is cleared, show all navigation buttons and return to intro
+        if (input === "") {
+            ironBtn.style.display = "block";
+            pomniBtn.style.display = "block";
+            openTab(null, 'intro');
+            return;
+        }
+
+        // Check matches
+        let showIron = "iron man".includes(input) || "tony stark".includes(input);
+        let showPomni = "pomni".includes(input) || "tadc".includes(input);
+
+        // Toggle button visibilities
+        ironBtn.style.display = showIron ? "block" : "none";
+        pomniBtn.style.display = showPomni ? "block" : "none";
+
+        // Auto-focus on the matched character tab if it's the clear match
+        if (showIron && !showPomni) {
+            openTab(null, 'ironman');
+        } else if (showPomni && !showIron) {
+            openTab(null, 'pomni');
+        }
+    }
+</script>
+
+</body>
+</html>
