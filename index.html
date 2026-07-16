@@ -82,7 +82,7 @@
 
         /* Active tab styling */
         .tab-btn.active {
-            color: #00bcd4; /* Sleek cyan accent color */
+            color: #00bcd4;
             background-color: #262626;
             border-bottom: 3px solid #00bcd4;
         }
@@ -93,7 +93,7 @@
         }
 
         .content-panel {
-            display: none; /* Hidden by default */
+            display: none;
             animation: fadeIn 0.5s ease;
         }
 
@@ -106,7 +106,7 @@
         .character-card {
             display: flex;
             gap: 30px;
-            align-items: center;
+            align-items: flex-start;
         }
 
         /* Intro Styling */
@@ -125,6 +125,14 @@
             font-size: 18px;
             color: #ccc;
             line-height: 1.6;
+        }
+
+        /* Character Images Column Container */
+        .char-images-col {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex-shrink: 0;
         }
 
         /* Character Image */
@@ -154,6 +162,15 @@
             font-size: 16px;
             line-height: 1.6;
             color: #ddd;
+            margin-bottom: 15px;
+        }
+
+        .char-info h5, .char-info h6 {
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+            font-weight: normal;
+            line-height: 1.4;
         }
 
         /* Animation */
@@ -163,10 +180,15 @@
         }
 
         /* Responsive design */
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             .character-card {
                 flex-direction: column;
+                align-items: center;
                 text-align: center;
+            }
+            .char-images-col {
+                align-items: center;
+                width: 100%;
             }
             .char-image {
                 width: 100%;
@@ -178,7 +200,7 @@
 <body>
 
 <div class="search-container">
-    <input type="text" id="searchBar" class="search-bar" placeholder="Pixelcord5 Search Charater" onkeyup="filterSearch()">
+    <input type="text" id="searchBar" class="search-bar" placeholder="Search Character..." onkeyup="filterSearch()">
 </div>
 
 <div class="container">
@@ -187,8 +209,7 @@
         <button class="tab-btn" id="btn-ironman" onclick="openTab(event, 'ironman')">Iron Man</button>
         <button class="tab-btn" id="btn-pomni" onclick="openTab(event, 'pomni')">Pomni</button>
         <button class="tab-btn" id="btn-kinger" onclick="openTab(event, 'kinger')">Kinger</button>
-        <button class="tab-btn" id="btn-poni" onclick="openTab(event, 'kir')">Buzz Lightyear</button>
-    
+        <button class="tab-btn" id="btn-buzz" onclick="openTab(event, 'Buzz')">Buzz Lightyear</button>
     </div>
 
     <div class="tab-content">
@@ -202,18 +223,17 @@
         
         <div id="ironman" class="content-panel">
             <div class="character-card">
-                <img src="https://i.pinimg.com/736x/6b/2f/bb/6b2fbb11ab91a68e86233b462e416213.jpg" alt="Iron Man" class="char-image">
-                 <img src="https://via.placeholder.com/250x350" alt="ts Man" class="char-image">
+                <div class="char-images-col">
+                    <img src="https://i.pinimg.com/736x/6b/2f/bb/6b2fbb11ab91a68e86233b462e416213.jpg" alt="Iron Man" class="char-image">
+                    <img src="https://via.placeholder.com/250x350" alt="Tony Stark" class="char-image">
+                </div>
                 <div class="char-info">
                     <h2>Iron Man</h2>
                     <h3>Tony Stark</h3>
-                    <p>
-
-Tony Stark is a brilliant inventor, engineer, and billionaire who leads Stark Industries. After being captured during a weapons demonstration, he built the first Iron Man suit to escape and decided to use his technology to protect people instead of creating weapons. Tony is known for his quick wit, confidence, and intelligence. Although he can be arrogant at times, he deeply cares about his friends, family, and the safety of the world. Throughout his journey, he grows from a self-centered businessman into one of Earth's greatest heroes.
-                      <p>  Tony Stark is Played by Robert Downey Junior RDJ <p>
-<br> Iron Man is the superhero identity of Tony Stark. Wearing a high-tech armored suit powered by an Arc Reactor, Iron Man can fly at incredible speeds, fire powerful energy blasts, and use advanced weapons and AI systems. Tony constantly upgrades his suits with new technology, making each version stronger and more capable. As a founding member of the Avengers, Iron Man plays a major role in defending Earth against powerful threats, relying on both his intelligence and determination to overcome challenges. <br>
-  <h5>Ironman and Tony Stark is by and Owned By Marvel Studios LLC and The Walt Disney Company</h5>                      
-</p>
+                    <p>Tony Stark is a brilliant inventor, engineer, and billionaire who leads Stark Industries. After being captured during a weapons demonstration, he built the first Iron Man suit to escape and decided to use his technology to protect people instead of creating weapons. Tony is known for his quick wit, confidence, and intelligence. Although he can be arrogant at times, he deeply cares about his friends, family, and the safety of the world. Throughout his journey, he grows from a self-centered businessman into one of Earth's greatest heroes.</p>
+                    <p>Tony Stark is played by Robert Downey Junior (RDJ).</p>
+                    <p>Iron Man is the superhero identity of Tony Stark. Wearing a high-tech armored suit powered by an Arc Reactor, Iron Man can fly at incredible speeds, fire powerful energy blasts, and use advanced weapons and AI systems. Tony constantly upgrades his suits with new technology, making each version stronger and more capable. As a founding member of the Avengers, Iron Man plays a major role in defending Earth against powerful threats, relying on both his intelligence and determination to overcome challenges.</p>
+                    <h5>Iron Man and Tony Stark are owned by Marvel Studios LLC and The Walt Disney Company.</h5>                      
                 </div>
             </div>
         </div>
@@ -224,73 +244,51 @@ Tony Stark is a brilliant inventor, engineer, and billionaire who leads Stark In
                 <div class="char-info">
                     <h2>Pomni</h2>
                     <h3>The Amazing Digital Circus</h3>
-                                        <p>Pomni is the main protagonist of The Amazing Digital Circus, a 25-year-old woman who was trapped in a virtual reality circus after wearing a mysterious headset.  Her name, meaning "remember" in Russian, was randomly assigned by the AI ringmaster Caine after Pomni forgot her real identity. 
-
-<p>appearance and Physiology</p>
-
-She appears as a stylized jester with a large head, slim limbs, white skin, and a red-and-blue striped outfit with mismatched gloves and shoes. 
-As a digital avatar, she possesses immortality, invulnerability, and an elastic body that can stretch and warp, though she retains human emotions and psychological trauma. 
-Her eyes typically display a red and blue pinwheel pattern, which turns into chaotic scribbles when she is fearful or distressed. 
-Personality and Role
-                    <P> is Voiced By Lizzie Freeman</p>
-
-Initially, Pomni is highly anxious, paranoid, and fragile, struggling to accept her predicament and desperately seeking an escape. 
-Despite her fear, she is empathetic and caring, often acting as a confidant for other trapped characters like Ragatha, Jax, and Gangle. 
-Over time, she evolves from a panicked newcomer into a more grounded and resilient figure, showing courage and leadership while navigating the circus's psychological horrors. 
-Background
-<P> Pomni's real name is Abagail Brooks
-</P>
-
-In the real world, she worked as a supermarket accountant and ran an urban exploration YouTube channel. 
-Her digital form allows her to perform feats impossible for humans, such as surviving fatal falls and generating objects, but she cannot truly die; the only alternative is abstraction, where she loses her sense of self. </p>
-<h6> Pomni and The Amazing Digital Circus is by and owned by GLITCH Productions and Gooseworx</h6>
-                </div>
+                    <p>Pomni is the main protagonist of The Amazing Digital Circus, a 25-year-old woman who was trapped in a virtual reality circus after wearing a mysterious headset. Her name, meaning "remember" in Russian, was randomly assigned by the AI ringmaster Caine after Pomni forgot her real identity.</p>
+                    
+                    <h3>Appearance and Physiology</h3>
+                    <p>She appears as a stylized jester with a large head, slim limbs, white skin, and a red-and-blue striped outfit with mismatched gloves and shoes. As a digital avatar, she possesses immortality, invulnerability, and an elastic body that can stretch and warp, though she retains human emotions and psychological trauma. Her eyes typically display a red and blue pinwheel pattern, which turns into chaotic scribbles when she is fearful or distressed.</p>
+                    
+                    <h3>Personality and Role</h3>
+                    <p>Initially, Pomni is highly anxious, paranoid, and fragile, struggling to accept her predicament and desperately seeking an escape. Despite her fear, she is empathetic and caring, often acting as a confidant for other trapped characters like Ragatha, Jax, and Gangle. Over time, she evolves from a panicked newcomer into a more grounded and resilient figure, showing courage and leadership while navigating the circus's psychological horrors.</p>
+                    <p>She is voiced by Lizzie Freeman.</p>
+                    
+                    <h3>Background</h3>
+                    <p>Pomni's real name is Abigail Brooks. In the real world, she worked as a supermarket accountant and ran an urban exploration YouTube channel. Her digital form allows her to perform feats impossible for humans, such as surviving fatal falls and generating objects, but she cannot truly die; the only alternative is abstraction, where she loses her sense of self.</p>
+                    <h6>Pomni and The Amazing Digital Circus are owned by GLITCH Productions and Gooseworx.</h6>
                 </div>
             </div>
         </div>
 
-    </div>
-</div>
-
-    <div id="kinger" class="content-panel">
+        <div id="kinger" class="content-panel">
             <div class="character-card">
                 <img src="https://via.placeholder.com/250x350" alt="Kinger" class="char-image">
                 <div class="char-info">
                     <h2>Kinger</h2>
                     <h3>The Amazing Digital Circus</h3>
-                    <p>Kinger is a supporting character in the Australian-American adult animated psychological comedy series The Amazing Digital Circus, created by Gooseworx and produced by Glitch Productions. Voiced by Sean Chiplock, Kinger is a 48-year-old human trapped in the digital world who takes on the form of a king chess piece.  He is the circus's longest-standing human member, having been trapped there significantly longer than the other cast members, which has led to severe mental instability. 
-
-Kinger’s character is defined by his paranoia, anxiety, and forgetfulness, often displaying twitchy behavior and erratic reactions.  However, his sanity partially stabilizes when he is engulfed in darkness, a trait that allows him to offer wisdom and compassion during these rare moments of clarity. He has an odd fascination with "insect collections" (bugs), a trait linked to his wife, Queenie, who was an entomologist.  Their relationship is central to his backstory; Queenie eventually abstracted (a death-like state in the circus), a traumatic event that Kinger remembers vividly and which contributed to his current mental state. 
-
-Fans and theories often suggest Kinger may be the creator of the digital circus or a key programmer, given his extensive knowledge of the world’s mechanics, such as how food works.  His avatar, a king chess piece, is ironically one of the weaker pieces, protected by the queen, reflecting his reliance on others and perhaps a rift in his marriage with Queenie, whose avatar was a queen piece. Despite his madness, Kinger serves as a comic relief character who also embodies deep trauma, refusing to abstract despite the horrors he has witnessed, including the loss of his wife and other early members like Scratch and Kaufmo.</p>
-                    <h6> Kinger is by and from GLITCH Production and Gooseworx </h6>
+                    <p>Kinger is a supporting character in the Australian-American adult animated psychological comedy series The Amazing Digital Circus, created by Gooseworx and produced by Glitch Productions. Voiced by Sean Chiplock, Kinger is a 48-year-old human trapped in the digital world who takes on the form of a king chess piece. He is the circus's longest-standing human member, having been trapped there significantly longer than the other cast members, which has led to severe mental instability.</p>
+                    <p>Kinger’s character is defined by his paranoia, anxiety, and forgetfulness, often displaying twitchy behavior and erratic reactions. However, his sanity partially stabilizes when he is engulfed in darkness, a trait that allows him to offer wisdom and compassion during these rare moments of clarity. He has an odd fascination with "insect collections" (bugs), a trait linked to his wife, Queenie, who was an entomologist. Their relationship is central to his backstory; Queenie eventually abstracted (a death-like state in the circus), a traumatic event that Kinger remembers vividly and which contributed to his current mental state.</p>
+                    <p>Fans and theories often suggest Kinger may be the creator of the digital circus or a key programmer, given his extensive knowledge of the world’s mechanics, such as how food works. His avatar, a king chess piece, is ironically one of the weaker pieces, protected by the queen, reflecting his reliance on others and perhaps a rift in his marriage with Queenie, whose avatar was a queen piece. Despite his madness, Kinger serves as a comic relief character who also embodies deep trauma, refusing to abstract despite the horrors he has witnessed, including the loss of his wife and other early members like Scratch and Kaufmo.</p>
+                    <h6>Kinger is owned by GLITCH Productions and Gooseworx.</h6>
                 </div>
             </div>
         </div>
 
-    </div>
-</div>
-
-    </div>
-</div>
-
-    <div id="Buzz" class="content-panel">
+        <div id="Buzz" class="content-panel">
             <div class="character-card">
-                <img src="https://i.pinimg.com/736x/4f/49/c2/4f49c2b7b28b991059321b65c12f2cde.jpg" alt="Kinger" class="char-image">
+                <img src="https://i.pinimg.com/736x/4f/49/c2/4f49c2b7b28b991059321b65c12f2cde.jpg" alt="Buzz Lightyear" class="char-image">
                 <div class="char-info">
                     <h2>Buzz Lightyear</h2>
                     <h3>Toy Story, Lightyear</h3>
-                    <p>Buzz Lightyear is a heroic spaceman action figure and the deuteragonist of Toy Story franchise.  Originally a toy owned by Andy Davis, he is based on a fictional character from an in-universe science fiction franchise where he serves as a Space Ranger for the Star Command Intergalactic Alliance.  He is recognizable by his lime green, purple, and white space suit, pop-out wings, laser beam, and his signature catchphrase, "To infinity and beyond!" 
-
-In the Toy Story films, Buzz begins as a rival to Sheriff Woody, believing himself to be a real space ranger tasked with defeating the evil Emperor Zurg.  This rivalry evolves into a deep, lifelong friendship as Buzz learns he is a toy, transitioning from a deluded action figure to a self-aware, tactical leader who values his toy family above all else. He is voiced by Tim Allen in the Toy Story series. Buzz's Dad is Evil Emperor Zurg as shown in Toy Story 2 and his Wife/Girlfriend/Lover is Sheriff Jessie as shown in Toy Story 2, 3, 4, 5. Buzz Lightyear became Spanish Buzz when the toys tried to change him back to normal after Lotso factory rested him.</p>
-                    <h6> Buzz Lightyear, Lotso, Zurg, Sheriff Woody and Sheriff Jessie is by and from Disney, Walt Disney Animation Studio and Pixar </h6
+                    <p>Buzz Lightyear is a heroic spaceman action figure and the deuteragonist of the Toy Story franchise. Originally a toy owned by Andy Davis, he is based on a fictional character from an in-universe science fiction franchise where he serves as a Space Ranger for the Star Command Intergalactic Alliance. He is recognizable by his lime green, purple, and white space suit, pop-out wings, laser beam, and his signature catchphrase, "To infinity and beyond!"</p>
+                    <p>In the Toy Story films, Buzz begins as a rival to Sheriff Woody, believing himself to be a real space ranger tasked with defeating the evil Emperor Zurg. This rivalry evolves into a deep, lifelong friendship as Buzz learns he is a toy, transitioning from a deluded action figure to a self-aware, tactical leader who values his toy family above all else. He is voiced by Tim Allen in the Toy Story series. Buzz's Dad is Evil Emperor Zurg as shown in Toy Story 2 and his Wife/Girlfriend/Lover is Sheriff Jessie as shown in Toy Story 2, 3, 4, and 5. Buzz Lightyear became Spanish Buzz when the toys tried to change him back to normal after Lotso factory reset him.</p>
+                    <h6>Buzz Lightyear, Lotso, Zurg, Sheriff Woody and Sheriff Jessie are owned by Disney, Walt Disney Animation Studios and Pixar.</h6>
                 </div>
             </div>
         </div>
 
     </div>
 </div>
-
 
 <script>
     // Function to handle manual tab switching
@@ -309,49 +307,56 @@ In the Toy Story films, Buzz begins as a rival to Sheriff Woody, believing himse
         if (evt) {
             evt.currentTarget.classList.add("active");
         } else {
-            document.getElementById('btn-' + tabId).classList.add("active");
+            document.getElementById('btn-' + tabId.toLowerCase()).classList.add("active");
         }
     }
 
     // Function for Search Bar logic
     function filterSearch() {
-        const input = document.getElementById('searchBar').value.toLowerCase();
+        const input = document.getElementById('searchBar').value.toLowerCase().trim();
         
-        // Character names tied to their respective tab IDs
-        const characters = [
-            { name: "iron man", id: "ironman" },
-            { name: "tony stark", id: "ironman" },
-            { name: "pomni", id: "pomni" },
-            { name: "tadc", id: "pomni" }
-        ];
-
-        // Hide or show top navigation tab buttons based on search text
         const ironBtn = document.getElementById('btn-ironman');
         const pomniBtn = document.getElementById('btn-pomni');
+        const kingerBtn = document.getElementById('btn-kinger');
+        const buzzBtn = document.getElementById('btn-buzz');
 
-        // If search bar is cleared, show all navigation buttons and return to intro
+        // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
             ironBtn.style.display = "block";
             pomniBtn.style.display = "block";
+            kingerBtn.style.display = "block";
+            buzzBtn.style.display = "block";
             openTab(null, 'intro');
             return;
         }
 
-        // Check matches
+        // Determine matches based on input keywords
         let showIron = "iron man".includes(input) || "tony stark".includes(input);
-        let showPomni = "pomni".includes(input) || "tadc".includes(input);
-          let showPomni = "kinger".includes(input) || "j".includes(input);
+        let showPomni = "pomni".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
+        let showKinger = "kinger".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
+        let showBuzz = "buzz".includes(input) || "lightyear".
+includes(input) || "toy story".includes(input);
 
-        // Toggle button visibilities
+        // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
         pomniBtn.style.display = showPomni ? "block" : "none";
-        kingerBtn.style.display = showBesttadc ? "block" : "none";
+        kingerBtn.style.display = showKinger ? "block" : "none";
+        buzzBtn.style.display = showBuzz ? "block" : "none";
 
-        // Auto-focus on the matched character tab if it's the clear match
-        if (showIron && !showPomni) {
-            openTab(null, 'ironman');
-        } else if (showPomni && !showIron) {
-            openTab(null, 'pomni');
+        // Auto-navigate to matched character panels
+        const activeMatches = [
+            { show: showIron, id: 'ironman' },
+            { show: showPomni, id: 'pomni' },
+            { show: showKinger, id: 'kinger' },
+            { show: showBuzz, id: 'Buzz' }
+        ].filter(item => item.show);
+
+        // If there's exactly one clear match, navigate to it automatically
+        if (activeMatches.length === 1) {
+            openTab(null, activeMatches[0].id);
+        } else {
+            // Otherwise, route back to the main intro tab safely
+            openTab(null, 'intro');
         }
     }
 </script>
