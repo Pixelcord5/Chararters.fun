@@ -68,7 +68,7 @@
             background: none;
             border: none;
             color: #aaa;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -209,7 +209,11 @@
         <button class="tab-btn" id="btn-ironman" onclick="openTab(event, 'ironman')">Iron Man</button>
         <button class="tab-btn" id="btn-pomni" onclick="openTab(event, 'pomni')">Pomni</button>
         <button class="tab-btn" id="btn-kinger" onclick="openTab(event, 'kinger')">Kinger</button>
-        <button class="tab-btn" id="btn-buzz" onclick="openTab(event, 'Buzz')">Buzz Lightyear</button>
+        <button class="tab-btn" id="btn-buzz" onclick="openTab(event, 'Buzz')">Buzz</button>
+        <button class="tab-btn" id="btn-jessie" onclick="openTab(event, 'jessie')">Jessie</button>
+        <button class="tab-btn" id="btn-gangle" onclick="openTab(event, 'gangle')">Gangle</button>
+        <button class="tab-btn" id="btn-caine" onclick="openTab(event, 'caine')">Caine</button>
+        <button class="tab-btn" id="btn-eniac" onclick="openTab(event, 'eniac')">Eniac</button>
     </div>
 
     <div class="tab-content">
@@ -287,6 +291,58 @@
             </div>
         </div>
 
+        <div id="jessie" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/250x350" alt="Jessie" class="char-image">
+                <div class="char-info">
+                    <h2>Jessie</h2>
+                    <h3>Toy Story</h3>
+                    <p>Jessie is a energetic, friendly, and highly excitable cowgirl doll who first appears in Toy Story 2. She is based on a character from the vintage in-universe television show "Woody's Roundup," alongside Sheriff Woody, Bullseye, and Stinky Pete. Jessie is deeply sensitive and initially fearful of being abandoned or put into dark storage due to her past trauma with her old owner, Emily.</p>
+                    <p>With Woody's help, Jessie overcomes her anxieties and happily joins Andy's family. She is recognizable by her signature red yarn hair, cow-print chaps, and yellow ribbon. Known for her high-spirited yodeling and "Yee-haw!" catchphrase, she is voiced by Joan Cusack. Jessie shares a romantic bond with Buzz Lightyear, particularly evident when Buzz gets switched into his "Spanish mode" and in later installments of the Toy Story saga.</p>
+                    <h6>Jessie is owned by Disney, Walt Disney Animation Studios, and Pixar.</h6>
+                </div>
+            </div>
+        </div>
+
+        <div id="gangle" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/250x350" alt="Gangle" class="char-image">
+                <div class="char-info">
+                    <h2>Gangle</h2>
+                    <h3>The Amazing Digital Circus</h3>
+                    <p>Gangle is a supporting character in the dark psychological comedy series The Amazing Digital Circus. Composed almost entirely of a single coiled red ribbon, Gangle wears theater masks that define her current emotional state and personality. She has a porcelain Comedy Mask (which represents her happy self) and a Tragedy Mask (which represents her sad, fragile state).</p>
+                    <p>Unfortunately, Gangle’s happy Comedy Mask is frequently broken by Jax or shattered during chaotic circus activities, leaving her wearing her fragile Tragedy Mask for most of the show. She is highly anxious, emotionally sensitive, and easily pushed around by bolder cast members. Gangle is voiced by Marissa Lenti and brings a tragic, sympathetic layer to the circus's dynamic.</p>
+                    <h6>Gangle and The Amazing Digital Circus are owned by GLITCH Productions and Gooseworx.</h6>
+                </div>
+            </div>
+        </div>
+
+        <div id="caine" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/250x350" alt="Caine" class="char-image">
+                <div class="char-info">
+                    <h2>Caine</h2>
+                    <h3>The Amazing Digital Circus</h3>
+                    <p>Caine is the eccentric, energetic, and unpredictable Ringmaster of the Amazing Digital Circus. Unlike the humans trapped within the virtual world, Caine is an Artificial Intelligence. Visually, he is a surreal being with a set of chattering wind-up dentures for a head, containing floating human eyes inside his gums, dressed in a red ringmaster's tuxedo.</p>
+                    <p>Caine possesses near-infinite power within the circus boundaries, acting as a god-like administrator who constructs wild games, digital foods, and environments. While he is not malicious, he has a complete disconnect from human psychology and organic needs, which often leads to psychological distress for the humans he tries to entertain. He is accompanied by his bubble assistant, Bubble, and is voiced by Alex Rochon.</p>
+                    <h6>Caine and The Amazing Digital Circus are owned by GLITCH Productions and Gooseworx.</h6>
+                </div>
+            </div>
+        </div>
+
+        <div id="eniac" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/250x350" alt="Eniac" class="char-image">
+                <div class="char-info">
+                    <h2>Eniac</h2>
+                    <h3>The Amazing Digital Circus</h3>
+                    <p>Eniac is a mysterious character from the lore surrounding The Amazing Digital Circus. Named after the historical "ENIAC" (one of the world's very first electronic general-purpose computers developed in the 1940s), Eniac is theorized within the fandom to represent the early, primordial architecture of the digital world Caine rules over.</p>
+                    <p>Associated with the ancient, analog origins of the system, Eniac is often connected to the early computer setups seen in the void or the real-world offices of the company that created the VR headset. Her presence represents the haunting reality of old technology left to run indefinitely, harboring deep-seated secrets about why the human souls are trapped within the virtual framework.</p>
+                    <h6>Eniac and related Digital Circus lore are owned by GLITCH Productions and Gooseworx.</h6>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -303,11 +359,16 @@
             buttons[i].classList.remove("active");
         }
 
+        // Standardize searching ID mapping
         document.getElementById(tabId).classList.add("active");
-        if (evt) {
-            evt.currentTarget.classList.add("active");
-        } else {
-            document.getElementById('btn-' + tabId.toLowerCase()).classList.add("active");
+        
+        let buttonId = 'btn-' + tabId.toLowerCase();
+        // Edge case adjustments for Buzz Lightyear mapping mismatch
+        if (tabId === 'Buzz') buttonId = 'btn-buzz';
+        
+        const targetBtn = document.getElementById(buttonId);
+        if (targetBtn) {
+            targetBtn.classList.add("active");
         }
     }
 
@@ -319,6 +380,10 @@
         const pomniBtn = document.getElementById('btn-pomni');
         const kingerBtn = document.getElementById('btn-kinger');
         const buzzBtn = document.getElementById('btn-buzz');
+        const jessieBtn = document.getElementById('btn-jessie');
+        const gangleBtn = document.getElementById('btn-gangle');
+        const caineBtn = document.getElementById('btn-caine');
+        const eniacBtn = document.getElementById('btn-eniac');
 
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
@@ -326,6 +391,10 @@
             pomniBtn.style.display = "block";
             kingerBtn.style.display = "block";
             buzzBtn.style.display = "block";
+            jessieBtn.style.display = "block";
+            gangleBtn.style.display = "block";
+            caineBtn.style.display = "block";
+            eniacBtn.style.display = "block";
             openTab(null, 'intro');
             return;
         }
@@ -334,28 +403,39 @@
         let showIron = "iron man".includes(input) || "tony stark".includes(input);
         let showPomni = "pomni".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showKinger = "kinger".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
-        let showBuzz = "buzz".includes(input) || "lightyear".
-includes(input) || "toy story".includes(input);
+        let showBuzz = "buzz".includes(input) || "lightyear".includes(input) || "toy story".includes(input);
+        let showJessie = "jessie".includes(input) || "cowgirl".includes(input) || "toy story".includes(input);
+        let showGangle = "gangle".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
+        let showCaine = "caine".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
+        let showEniac = "eniac".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
 
         // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
         pomniBtn.style.display = showPomni ? "block" : "none";
         kingerBtn.style.display = showKinger ? "block" : "none";
         buzzBtn.style.display = showBuzz ? "block" : "none";
+        jessieBtn.style.display = showJessie ? "block" : "none";
+        gangleBtn.style.display = showGangle ? "block" : "none";
+        caineBtn.style.display = showCaine ? "block" : "none";
+        eniacBtn.style.display = showEniac ? "block" : "none";
 
         // Auto-navigate to matched character panels
         const activeMatches = [
             { show: showIron, id: 'ironman' },
             { show: showPomni, id: 'pomni' },
             { show: showKinger, id: 'kinger' },
-            { show: showBuzz, id: 'Buzz' }
+            { show: showBuzz, id: 'Buzz' },
+            { show: showJessie, id: 'jessie' },
+            { show: showGangle, id: 'gangle' },
+            { show: showCaine, id: 'caine' },
+            { show: showEniac, id: 'eniac' }
         ].filter(item => item.show);
 
-        // If there's exactly one clear match, navigate to it automatically
+        // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
             openTab(null, activeMatches[0].id);
         } else {
-            // Otherwise, route back to the main intro tab safely
+            // Otherwise, stay on intro
             openTab(null, 'intro');
         }
     }
