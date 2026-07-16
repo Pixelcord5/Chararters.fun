@@ -178,7 +178,7 @@
 <body>
 
 <div class="search-container">
-    <input type="text" id="searchBar" class="search-bar" placeholder="Search characters (e.g., Pomni, Iron Man)..." onkeyup="filterSearch()">
+    <input type="text" id="searchBar" class="search-bar" placeholder="Pixelcord5 Search Charater" onkeyup="filterSearch()">
 </div>
 
 <div class="container">
@@ -186,7 +186,9 @@
         <button class="tab-btn active" id="btn-intro" onclick="openTab(event, 'intro')">Welcome</button>
         <button class="tab-btn" id="btn-ironman" onclick="openTab(event, 'ironman')">Iron Man</button>
         <button class="tab-btn" id="btn-pomni" onclick="openTab(event, 'pomni')">Pomni</button>
-        <button class="tab-btn" id="btn-pomni" onclick="openTab(event, 'kinger')">Kinger</button>
+        <button class="tab-btn" id="btn-kinger" onclick="openTab(event, 'kinger')">Kinger</button>
+        <button class="tab-btn" id="btn-poni" onclick="openTab(event, 'kir')">Buzz Lightyear</button>
+    
     </div>
 
     <div class="tab-content">
@@ -194,7 +196,7 @@
         <div id="intro" class="content-panel active">
             <div class="intro-content">
                 <h1>Character Universe</h1>
-                <p>Welcome to the ultimate character hub! Use the tabs above to explore different characters, or use the search bar to find your favorites instantly.</p>
+                <p>Welcome to the ultimate character.fun! Use the tabs above to explore different characters, or use the search bar to find your favorites instantly.</p>
             </div>
         </div>
         
@@ -205,7 +207,7 @@
                 <div class="char-info">
                     <h2>Iron Man</h2>
                     <h3>Tony Stark</h3>
-                    <p>Here's a longer description:
+                    <p>
 
 Tony Stark is a brilliant inventor, engineer, and billionaire who leads Stark Industries. After being captured during a weapons demonstration, he built the first Iron Man suit to escape and decided to use his technology to protect people instead of creating weapons. Tony is known for his quick wit, confidence, and intelligence. Although he can be arrogant at times, he deeply cares about his friends, family, and the safety of the world. Throughout his journey, he grows from a self-centered businessman into one of Earth's greatest heroes.
                       <p>  Tony Stark is Played by Robert Downey Junior RDJ <p>
@@ -272,7 +274,7 @@ Fans and theories often suggest Kinger may be the creator of the digital circus 
     </div>
 </div>
 
-    <div id="kinger" class="content-panel">
+    <div id="Buzz" class="content-panel">
             <div class="character-card">
                 <img src="https://i.pinimg.com/736x/4f/49/c2/4f49c2b7b28b991059321b65c12f2cde.jpg" alt="Kinger" class="char-image">
                 <div class="char-info">
@@ -338,10 +340,12 @@ In the Toy Story films, Buzz begins as a rival to Sheriff Woody, believing himse
         // Check matches
         let showIron = "iron man".includes(input) || "tony stark".includes(input);
         let showPomni = "pomni".includes(input) || "tadc".includes(input);
+          let showPomni = "kinger".includes(input) || "j".includes(input);
 
         // Toggle button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
         pomniBtn.style.display = showPomni ? "block" : "none";
+        kingerBtn.style.display = showBesttadc ? "block" : "none";
 
         // Auto-focus on the matched character tab if it's the clear match
         if (showIron && !showPomni) {
