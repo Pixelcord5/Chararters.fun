@@ -23,7 +23,7 @@
 
         .container {
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             background-color: #262626;
             border-radius: 12px;
             overflow: hidden;
@@ -33,7 +33,7 @@
         /* Search Section */
         .search-container {
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             margin-bottom: 20px;
         }
 
@@ -63,12 +63,12 @@
 
         .tab-btn {
             flex: 1;
-            min-width: 100px;
-            padding: 15px 20px;
+            min-width: 85px;
+            padding: 12px 10px;
             background: none;
             border: none;
             color: #aaa;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -137,8 +137,8 @@
 
         /* Character Image */
         .char-image {
-            width: 250px;
-            height: 350px;
+            width: 230px;
+            height: 320px;
             object-fit: cover;
             border-radius: 8px;
             background-color: #444;
@@ -163,6 +163,13 @@
             line-height: 1.6;
             color: #ddd;
             margin-bottom: 15px;
+        }
+
+        .char-info h4 {
+            font-size: 18px;
+            color: #ffa502;
+            margin-top: 20px;
+            margin-bottom: 8px;
         }
 
         .char-info h5, .char-info h6 {
@@ -192,7 +199,7 @@
             }
             .char-image {
                 width: 100%;
-                max-width: 250px;
+                max-width: 230px;
             }
         }
     </style>
@@ -200,7 +207,7 @@
 <body>
 
 <div class="search-container">
-    <input type="text" id="searchBar" class="search-bar" placeholder="Search Character..." onkeyup="filterSearch()">
+    <input type="text" id="searchBar" class="search-bar" placeholder="Search Character, Franchise, or Actor..." onkeyup="filterSearch()">
 </div>
 
 <div class="container">
@@ -210,10 +217,16 @@
         <button class="tab-btn" id="btn-pomni" onclick="openTab(event, 'pomni')">Pomni</button>
         <button class="tab-btn" id="btn-kinger" onclick="openTab(event, 'kinger')">Kinger</button>
         <button class="tab-btn" id="btn-buzz" onclick="openTab(event, 'Buzz')">Buzz</button>
+        <button class="tab-btn" id="btn-woody" onclick="openTab(event, 'woody')">Woody</button>
         <button class="tab-btn" id="btn-jessie" onclick="openTab(event, 'jessie')">Jessie</button>
+        <button class="tab-btn" id="btn-slinky" onclick="openTab(event, 'slinky')">Slinky</button>
         <button class="tab-btn" id="btn-gangle" onclick="openTab(event, 'gangle')">Gangle</button>
         <button class="tab-btn" id="btn-caine" onclick="openTab(event, 'caine')">Caine</button>
         <button class="tab-btn" id="btn-eniac" onclick="openTab(event, 'eniac')">Eniac</button>
+        <button class="tab-btn" id="btn-jax" onclick="openTab(event, 'jax')">Jax</button>
+        <button class="tab-btn" id="btn-zooble" onclick="openTab(event, 'zooble')">Zooble</button>
+        <button class="tab-btn" id="btn-ragatha" onclick="openTab(event, 'ragatha')">Ragatha</button>
+        <button class="tab-btn" id="btn-spiderman" onclick="openTab(event, 'spiderman')">Spider-Man</button>
     </div>
 
     <div class="tab-content">
@@ -229,7 +242,7 @@
             <div class="character-card">
                 <div class="char-images-col">
                     <img src="https://i.pinimg.com/736x/6b/2f/bb/6b2fbb11ab91a68e86233b462e416213.jpg" alt="Iron Man" class="char-image">
-                    <img src="https://via.placeholder.com/250x350" alt="Tony Stark" class="char-image">
+                    <img src="https://via.placeholder.com/230x320" alt="Tony Stark" class="char-image">
                 </div>
                 <div class="char-info">
                     <h2>Iron Man</h2>
@@ -266,7 +279,7 @@
 
         <div id="kinger" class="content-panel">
             <div class="character-card">
-                <img src="https://via.placeholder.com/250x350" alt="Kinger" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Kinger" class="char-image">
                 <div class="char-info">
                     <h2>Kinger</h2>
                     <h3>The Amazing Digital Circus</h3>
@@ -291,22 +304,48 @@
             </div>
         </div>
 
+        <div id="woody" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/230x320" alt="Sheriff Woody" class="char-image">
+                <div class="char-info">
+                    <h2>Sheriff Woody</h2>
+                    <h3>Toy Story</h3>
+                    <p>Sheriff Woody Pride is the main protagonist of the Toy Story franchise. He is a vintage pull-string cowboy doll who was originally Andy Davis's favorite toy, serving as the trusted leader of the toys in Andy's room. Woody is exceptionally loyal, protective of his toy family, and highly resourceful, though he can occasionally be stubborn or prone to jealousy.</p>
+                    <p>Throughout the films, Woody undergoes a profound emotional journey: learning to share Andy's affection with Buzz Lightyear, rescuing his friends from various perils, accepting his place with a new owner (Bonnie), and eventually making the brave decision to become a "free toy" alongside Bo Peep. He is famously voiced by Tom Hanks in the main feature films.</p>
+                    <h6>Sheriff Woody and Toy Story are owned by Disney and Pixar.</h6>
+                </div>
+            </div>
+        </div>
+
         <div id="jessie" class="content-panel">
             <div class="character-card">
-                <img src="https://via.placeholder.com/250x350" alt="Jessie" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Jessie" class="char-image">
                 <div class="char-info">
                     <h2>Jessie</h2>
                     <h3>Toy Story</h3>
-                    <p>Jessie is a energetic, friendly, and highly excitable cowgirl doll who first appears in Toy Story 2. She is based on a character from the vintage in-universe television show "Woody's Roundup," alongside Sheriff Woody, Bullseye, and Stinky Pete. Jessie is deeply sensitive and initially fearful of being abandoned or put into dark storage due to her past trauma with her old owner, Emily.</p>
+                    <p>Jessie is an energetic, friendly, and highly excitable cowgirl doll who first appears in Toy Story 2. She is based on a character from the vintage in-universe television show "Woody's Roundup," alongside Sheriff Woody, Bullseye, and Stinky Pete. Jessie is deeply sensitive and initially fearful of being abandoned or put into dark storage due to her past trauma with her old owner, Emily.</p>
                     <p>With Woody's help, Jessie overcomes her anxieties and happily joins Andy's family. She is recognizable by her signature red yarn hair, cow-print chaps, and yellow ribbon. Known for her high-spirited yodeling and "Yee-haw!" catchphrase, she is voiced by Joan Cusack. Jessie shares a romantic bond with Buzz Lightyear, particularly evident when Buzz gets switched into his "Spanish mode" and in later installments of the Toy Story saga.</p>
                     <h6>Jessie is owned by Disney, Walt Disney Animation Studios, and Pixar.</h6>
                 </div>
             </div>
         </div>
 
+        <div id="slinky" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/230x320" alt="Slinky Dog" class="char-image">
+                <div class="char-info">
+                    <h2>Slinky Dog</h2>
+                    <h3>Toy Story</h3>
+                    <p>Slinky Dog (often called "Slinky" or "Slink") is a classic toy dog with a wooden front and back, linked by a stretchable metal Slinky spring. He is one of the most prominent supporting characters in the Toy Story films and is famously Woody’s most loyal and trusted friend, always willing to believe in Woody's leadership even when other toys doubt him.</p>
+                    <p>Slinky's stretchable body is frequently used by the toys to perform heroic maneuvers, bridge gaps, or escape dangerous situations. He is friendly, down-to-earth, and speaks with a warm southern drawl. Slinky was originally voiced by Jim Varney in Toy Story 1 and 2, and later by Blake Clark following Varney's passing.</p>
+                    <h6>Slinky Dog and Toy Story are owned by Disney and Pixar.</h6>
+                </div>
+            </div>
+        </div>
+
         <div id="gangle" class="content-panel">
             <div class="character-card">
-                <img src="https://via.placeholder.com/250x350" alt="Gangle" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Gangle" class="char-image">
                 <div class="char-info">
                     <h2>Gangle</h2>
                     <h3>The Amazing Digital Circus</h3>
@@ -319,7 +358,7 @@
 
         <div id="caine" class="content-panel">
             <div class="character-card">
-                <img src="https://via.placeholder.com/250x350" alt="Caine" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Caine" class="char-image">
                 <div class="char-info">
                     <h2>Caine</h2>
                     <h3>The Amazing Digital Circus</h3>
@@ -332,13 +371,80 @@
 
         <div id="eniac" class="content-panel">
             <div class="character-card">
-                <img src="https://via.placeholder.com/250x350" alt="Eniac" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Eniac" class="char-image">
                 <div class="char-info">
                     <h2>Eniac</h2>
                     <h3>The Amazing Digital Circus</h3>
-                    <p>Eniac is a mysterious character from the lore surrounding The Amazing Digital Circus. Named after the historical "ENIAC" (one of the world's very first electronic general-purpose computers developed in the 1940s), Eniac is theorized within the fandom to represent the early, primordial architecture of the digital world Caine rules over.</p>
+                    <p>Eniac is a mysterious character from the lore surrounding The Amazing Digital Circus. Eniac is a fan representation of the blue ai inside Caine. Eniac is theorized within the fandom to represent the early, primordial architecture of the digital world Caine rules over.</p>
                     <p>Associated with the ancient, analog origins of the system, Eniac is often connected to the early computer setups seen in the void or the real-world offices of the company that created the VR headset. Her presence represents the haunting reality of old technology left to run indefinitely, harboring deep-seated secrets about why the human souls are trapped within the virtual framework.</p>
-                    <h6>Eniac and related Digital Circus lore are owned by GLITCH Productions and Gooseworx.</h6>
+                    <h6></h6></h6>
+                </div>
+            </div>
+        </div>
+
+        <div id="jax" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/230x320" alt="Jax" class="char-image">
+                <div class="char-info">
+                    <h2>Jax</h2>
+                    <h3>The Amazing Digital Circus</h3>
+                    <p>Jax is a major supporting character in The Amazing Digital Circus. He takes on the form of a tall, lanky, purple cartoon rabbit wearing pink overalls. Jax is notoriously cynical, mischievous, and enjoys playing mean-spirited pranks on his fellow circus mates, particularly targeting Gangle, Zooble, Raghatha. Jax was once friend with Ribbit and Kaufmo but after pushing Ribbit away caused her to Abstract and also after Kaufmo abstracted, he wanted to abstract and he did in ep 9. A ship called funnybunny ships jax and pomni together</p>
+                    <p>He is highly indifferent to the psychological horrors of the circus, preferring to use humor and sarcasm as a defense mechanism to cope with his imprisonment. Despite his abrasive, selfish personality and tendency to dodge responsibilities, Jax remains a fan-favorite character. He is voiced by Michael Kovach.</p>
+                    <h6>Jax and The Amazing Digital Circus are owned by GLITCH Productions and Gooseworx.</h6>
+                </div>
+            </div>
+        </div>
+
+        <div id="zooble" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/230x320" alt="Zooble" class="char-image">
+                <div class="char-info">
+                    <h2>Zooble</h2>
+                    <h3>The Amazing Digital Circus</h3>
+                    <p>Zooble is an irritable, cynical, and deeply detached member of the Digital Circus. Their avatar is a collection of mismatched geometric building blocks and plastic toy limbs, which can easily be taken apart, swapped, or customized. Zooble has a low tolerance for Caine's eccentric adventures and generally opts out of participating in games. Zooble has a strong romantic relationship with Gangle even doing her in the ep9 end credits</p>
+                    <p>Though they present a cold, anti-social exterior, Zooble has shown underlying empathy for their friends when situations escalate into genuine danger. They are voiced by Ashley Nichols, adding a highly relatable, dry-witted dynamic to the cast's chaotic ecosystem.</p>
+                    <h6>Zooble and The Amazing Digital Circus are owned by GLITCH Productions and Gooseworx.</h6>
+                </div>
+            </div>
+        </div>
+
+        <div id="ragatha" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/230x320" alt="Ragatha" class="char-image">
+                <div class="char-info">
+                    <h2>Ragatha</h2>
+                    <h3>The Amazing Digital Circus</h3>
+                    <p>Ragatha is a sweet, warm, and optimistic human trapped in the virtual world who takes on the appearance of a classic rag doll. She is characterized by her red yarn hair, a blue-patched dress, and a singular black button eye. Ragatha acts as the emotional anchor of the group, striving to keep a positive outlook to avoid abstracting. Ragatha was once riends with Jax.</p>
+                    <p>She is often the first to comfort new arrivals, like Pomni, and works tirelessly to maintain a sense of sanity within Caine’s bizarre world. Despite her kind nature, Ragatha harbors deep fears of abandonment and psychological deterioration. She is voiced by Amanda Hufford.</p>
+                    <h6>Ragatha and The Amazing Digital Circus are owned by GLITCH Productions and Gooseworx.</h6>
+                </div>
+            </div>
+        </div>
+
+        <div id="spiderman" class="content-panel">
+            <div class="character-card">
+                <div class="char-images-col">
+                    <img src="https://via.placeholder.com/230x320" alt="Spider-Man Tobey/Andrew" class="char-image">
+                    <img src="https://via.placeholder.com/230x320" alt="Spider-Man Tom/Miles" class="char-image">
+                </div>
+                <div class="char-info">
+                    <h2>Spider-Man</h2>
+                    <h3>Peter Parker & Miles Morales (Multiverse Dimensions)</h3>
+                    <p>Guided by his late Uncle Ben's core philosophy—"With great power comes great responsibility"—Spider-Man balances the heavy burden of being a superhero with his troubled personal life across various realities in the Multiverse.</p>
+                    
+                    <h4>The Sam Raimi Trilogy (Spider-Man 1, 2, & 3)</h4>
+                    <p>Played by Tobey Maguire, this classic Peter Parker struggles with bills, rent, and relationships in early 2000s New York. He battles the Green Goblin, Doc Ock, Sandman, and Venom while navigating his romance with Mary Jane Watson.</p>
+                    
+                    <h4>The Amazing Spider-Man Duology (TASM 1 & 2)</h4>
+                    <p>Played by Andrew Garfield, this version is a tech-savvy, skateboarding science student searching for his parents' secrets. He fights the Lizard and Electro, culminating in the tragic loss of Gwen Stacy.</p>
+                    
+                    <h4>The Marvel Cinematic Universe (MCU Trilogy)</h4>
+                    <p>Played by Tom Holland, this youthful Peter is mentored by Tony Stark. He navigates high school, joins the Avengers to fight Thanos, and later faces villains from other dimensions in <i>No Way Home</i> alongside the other Peter Parkers, sacrificing his identity to save the multiverse.</p>
+
+                    <h4>The Animated Spider-Verse Series</h4>
+                    <p>Focuses on Miles Morales (voiced by Shameik Moore), a Brooklyn teen who becomes the new Spider-Man after the death of his world's Peter Parker. Across <i>Into the Spider-Verse</i> and <i>Across the Spider-Verse</i>, Miles travels through alternate dimensions, working with Gwen Stacy (Spider-Gwen), Peter B. Parker, Spider-Man 2099, and other Spider-People to rewrite his own destiny.</p>
+                    
+                    <h5>Spider-Man is owned by Marvel Characters, Inc., Sony Pictures Entertainment, and Marvel Studios.</h5>                      
                 </div>
             </div>
         </div>
@@ -359,11 +465,9 @@
             buttons[i].classList.remove("active");
         }
 
-        // Standardize searching ID mapping
         document.getElementById(tabId).classList.add("active");
         
         let buttonId = 'btn-' + tabId.toLowerCase();
-        // Edge case adjustments for Buzz Lightyear mapping mismatch
         if (tabId === 'Buzz') buttonId = 'btn-buzz';
         
         const targetBtn = document.getElementById(buttonId);
@@ -380,10 +484,16 @@
         const pomniBtn = document.getElementById('btn-pomni');
         const kingerBtn = document.getElementById('btn-kinger');
         const buzzBtn = document.getElementById('btn-buzz');
+        const woodyBtn = document.getElementById('btn-woody');
         const jessieBtn = document.getElementById('btn-jessie');
+        const slinkyBtn = document.getElementById('btn-slinky');
         const gangleBtn = document.getElementById('btn-gangle');
         const caineBtn = document.getElementById('btn-caine');
         const eniacBtn = document.getElementById('btn-eniac');
+        const jaxBtn = document.getElementById('btn-jax');
+        const zoobleBtn = document.getElementById('btn-zooble');
+        const ragathaBtn = document.getElementById('btn-ragatha');
+        const spidermanBtn = document.getElementById('btn-spiderman');
 
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
@@ -391,10 +501,16 @@
             pomniBtn.style.display = "block";
             kingerBtn.style.display = "block";
             buzzBtn.style.display = "block";
+            woodyBtn.style.display = "block";
             jessieBtn.style.display = "block";
+            slinkyBtn.style.display = "block";
             gangleBtn.style.display = "block";
             caineBtn.style.display = "block";
             eniacBtn.style.display = "block";
+            jaxBtn.style.display = "block";
+            zoobleBtn.style.display = "block";
+            ragathaBtn.style.display = "block";
+            spidermanBtn.style.display = "block";
             openTab(null, 'intro');
             return;
         }
@@ -404,20 +520,32 @@
         let showPomni = "pomni".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showKinger = "kinger".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showBuzz = "buzz".includes(input) || "lightyear".includes(input) || "toy story".includes(input);
+        let showWoody = "woody".includes(input) || "sheriff".includes(input) || "toy story".includes(input) || "cowboy".includes(input);
         let showJessie = "jessie".includes(input) || "cowgirl".includes(input) || "toy story".includes(input);
+        let showSlinky = "slinky".includes(input) || "slink".includes(input) || "dog".includes(input) || "toy story".includes(input);
         let showGangle = "gangle".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showCaine = "caine".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showEniac = "eniac".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
+        let showJax = "jax".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
+        let showZooble = "zooble".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
+        let showRagatha = "ragatha".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
+        let showSpiderman = "spiderman".includes(input) || "spider-man".includes(input) || "peter parker".includes(input) || "marvel".includes(input) || "tasm".includes(input) || "mcu".includes(input) || "spiderverse".includes(input) || "spider-verse".includes(input) || "miles".includes(input) || "morales".includes(input) || "holland".includes(input);
 
         // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
         pomniBtn.style.display = showPomni ? "block" : "none";
         kingerBtn.style.display = showKinger ? "block" : "none";
         buzzBtn.style.display = showBuzz ? "block" : "none";
+        woodyBtn.style.display = showWoody ? "block" : "none";
         jessieBtn.style.display = showJessie ? "block" : "none";
+        slinkyBtn.style.display = showSlinky ? "block" : "none";
         gangleBtn.style.display = showGangle ? "block" : "none";
         caineBtn.style.display = showCaine ? "block" : "none";
         eniacBtn.style.display = showEniac ? "block" : "none";
+        jaxBtn.style.display = showJax ? "block" : "none";
+        zoobleBtn.style.display = showZooble ? "block" : "none";
+        ragathaBtn.style.display = showRagatha ? "block" : "none";
+        spidermanBtn.style.display = showSpiderman ? "block" : "none";
 
         // Auto-navigate to matched character panels
         const activeMatches = [
@@ -425,17 +553,23 @@
             { show: showPomni, id: 'pomni' },
             { show: showKinger, id: 'kinger' },
             { show: showBuzz, id: 'Buzz' },
+            { show: showWoody, id: 'woody' },
             { show: showJessie, id: 'jessie' },
+            { show: showSlinky, id: 'slinky' },
             { show: showGangle, id: 'gangle' },
             { show: showCaine, id: 'caine' },
-            { show: showEniac, id: 'eniac' }
+            { show: showEniac, id: 'eniac' },
+            { show: showJax, id: 'jax' },
+            { show: showZooble, id: 'zooble' },
+            { show: showRagatha, id: 'ragatha' },
+            { show: showSpiderman, id: 'spiderman' }
         ].filter(item => item.show);
 
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
             openTab(null, activeMatches[0].id);
         } else {
-            // Otherwise, stay on intro
+            // Otherwise, stay on welcome tab
             openTab(null, 'intro');
         }
     }
