@@ -550,6 +550,58 @@ Freight Car (Товарный вагон)</p>
     </div>
 </div>
 
+    <!-- Batman -->
+<div id="batman" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Batman_DC_Comics.png" alt="Batman" class="char-image">
+            <img src="https://upload.wikimedia.org/wikipedia/en/1/17/Batman-BenAffleck.jpg" alt="Bruce Wayne" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Batman</h2>
+            <h3>Bruce Wayne</h3>
+            <p>Batman is a fictional superhero appearing in American comic books published by DC Comics. Created by artist Bob Kane and writer Bill Finger, Batman first appeared in Detective Comics #27 in 1939. As the protector of Gotham City, he uses his intelligence, detective skills, and physical prowess to fight crime.</p>
+            <p>Bruce Wayne witnessed the murder of his parents as a child, which motivated him to become Batman and fight injustice. He operates from his Batcave and relies on his wealth, gadgets, and martial arts skills.</p>
+            <h5>Batman is owned by DC Comics.</h5>
+        </div>
+    </div>
+</div>
+
+<!-- Ash Ketchum -->
+<div id="ashketchum" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/76/Ash_Ketchum.png" alt="Ash Ketchum" class="char-image">
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/0f/Ash_Ketchum.png" alt="Ash" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Ash Ketchum</h2>
+            <h3>Pokémon Trainer</h3>
+            <p>Ash Ketchum is the main protagonist in the Pokémon anime series. He is a passionate Pokémon trainer from Pallet Town, aspiring to become a Pokémon Master. Over the series, Ash travels across various regions, catching new Pokémon, competing in leagues, and battling Gym Leaders.</p>
+            <p>Ash is known for his determination, kindness, and unwavering friendship with Pikachu and other Pokémon. He is voiced by Veronica Taylor (English) and many other voice actors in different seasons.</p>
+            <h5>Ash Ketchun is owned by The Pokémon Company and Nintendo.</h5>
+        </div>
+    </div>
+</div>
+
+<!-- Kaufmo -->
+<div id="kaufmo" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://i.pinimg.com/originals/90/9e/8a/909e8a5fba9f1fba6a9b4f1d4e0a2b3e.jpg" alt="Kaufmo" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Kaufmo</h2>
+            <h3>The Amazing Digital Circus</h3>
+            <p>noseless clown with white skin, black button eyes, and a yellow suit adorned with red pom-pom buttons and a party hat.  Prior to his mental breakdown, he was a friendly, joke-telling character who became obsessed with finding an exit, leading to his descent into madness and eventual abstraction. 
+
+In his abstracted form, Kaufmo transforms into a black, rapidly glitching monster resembling a quadrupedal creature with a long, headless neck.  His body is covered in erratically flickering eyes of various colors (primarily pink, blue, and yellow), and he possesses superhuman strength and durability, allowing him to chase victims and smash through walls.  He is confined to the Cellar alongside other abstracted entities like Ribbit, Jax and is voiced by Arin Hanson.</p>
+            <p>He is voiced by Arin Hanson.</p>
+            <h5>Kaufmo is owned by GLITCH Productions and Gooseworx.</h5>
+        </div>
+    </div>
+</div>
+
 <script>
     // Function to handle manual tab switching
     function openTab(evt, tabId) {
@@ -646,6 +698,9 @@ Freight Car (Товарный вагон)</p>
         let showZooble = "zooble".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showRagatha = "ragatha".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showSpiderman = "spiderman".includes(input) || "spider-man".includes(input) || "peter parker".includes(input) || "marvel".includes(input) || "tasm".includes(input) || "mcu".includes(input) || "spiderverse".includes(input) || "spider-verse".includes(input) || "miles".includes(input);
+        let showBatman = input.includes("batman") || input.includes("bruce") || input.includes("wayne");
+let showAsh = input.includes("ash") || input.includes("ketchum") || input.includes("pokemon");
+let showKaufmo = input.includes("kaufmo") || input.includes("digital circus");
 
         // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
@@ -668,6 +723,10 @@ Freight Car (Товарный вагон)</p>
         zoobleBtn.style.display = showZooble ? "block" : "none";
         ragathaBtn.style.display = showRagatha ? "block" : "none";
         spidermanBtn.style.display = showSpiderman ? "block" : "none";
+        
+batmanBtn.style.display = showBatman ? "block" : "none";
+ashBtn.style.display = showAsh ? "block" : "none";
+kaufmoBtn.style.display = showKaufmo ? "block" : "none";
 
         // Auto-navigate to matched character panels
         const activeMatches = [
@@ -691,6 +750,9 @@ Freight Car (Товарный вагон)</p>
             { show: showZooble, id: 'zooble' },
             { show: showRagatha, id: 'ragatha' },
             { show: showSpiderman, id: 'spiderman' }
+            { show: showBatman, id: 'batman' },
+{ show: showAsh, id: 'ashketchum' },
+{ show: showKaufmo, id: 'kaufmo' },
         ].filter(item => item.show);
 
         // If there's exactly one match, navigate to it automatically
