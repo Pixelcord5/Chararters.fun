@@ -23,7 +23,7 @@
 
         .container {
             width: 100%;
-            max-width: 900px;
+            max-width: 950px;
             background-color: #262626;
             border-radius: 12px;
             overflow: hidden;
@@ -33,7 +33,7 @@
         /* Search Section */
         .search-container {
             width: 100%;
-            max-width: 900px;
+            max-width: 950px;
             margin-bottom: 20px;
         }
 
@@ -63,12 +63,12 @@
 
         .tab-btn {
             flex: 1;
-            min-width: 85px;
+            min-width: 90px;
             padding: 12px 10px;
             background: none;
             border: none;
             color: #aaa;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -207,26 +207,32 @@
 <body>
 
 <div class="search-container">
-    <input type="text" id="searchBar" class="search-bar" placeholder="Search Character, Franchise, or Actor..." onkeyup="filterSearch()">
+    <input type="text" id="searchBar" class="search-bar" placeholder="Search Character, Franchise, or Universe..." onkeyup="filterSearch()">
 </div>
 
 <div class="container">
     <div class="tabs-nav" id="tabsNav">
         <button class="tab-btn active" id="btn-intro" onclick="openTab(event, 'intro')">Welcome</button>
         <button class="tab-btn" id="btn-ironman" onclick="openTab(event, 'ironman')">Iron Man</button>
+        <button class="tab-btn" id="btn-captainamerica" onclick="openTab(event, 'captainamerica')">Cap (Steve)</button>
+        <button class="tab-btn" id="btn-falconcap" onclick="openTab(event, 'falconcap')">Cap (Sam)</button>
+        <button class="tab-btn" id="btn-wintersoldier" onclick="openTab(event, 'wintersoldier')">Winter Soldier</button>
+        <button class="tab-btn" id="btn-vision" onclick="openTab(event, 'vision')">Vision</button>
+        <button class="tab-btn" id="btn-spiderman" onclick="openTab(event, 'spiderman')">Spider-Man</button>
+        <button class="tab-btn" id="btn-shinchan" onclick="openTab(event, 'shinchan')">Shin-chan</button>
+        <button class="tab-btn" id="btn-peppapig" onclick="openTab(event, 'peppapig')">Peppa Pig</button>
         <button class="tab-btn" id="btn-pomni" onclick="openTab(event, 'pomni')">Pomni</button>
         <button class="tab-btn" id="btn-kinger" onclick="openTab(event, 'kinger')">Kinger</button>
+        <button class="tab-btn" id="btn-jax" onclick="openTab(event, 'jax')">Jax</button>
+        <button class="tab-btn" id="btn-zooble" onclick="openTab(event, 'zooble')">Zooble</button>
+        <button class="tab-btn" id="btn-ragatha" onclick="openTab(event, 'ragatha')">Ragatha</button>
+        <button class="tab-btn" id="btn-gangle" onclick="openTab(event, 'gangle')">Gangle</button>
+        <button class="tab-btn" id="btn-caine" onclick="openTab(event, 'caine')">Caine</button>
+        <button class="tab-btn" id="btn-eniac" onclick="openTab(event, 'eniac')">Eniac</button>
         <button class="tab-btn" id="btn-buzz" onclick="openTab(event, 'Buzz')">Buzz</button>
         <button class="tab-btn" id="btn-woody" onclick="openTab(event, 'woody')">Woody</button>
         <button class="tab-btn" id="btn-jessie" onclick="openTab(event, 'jessie')">Jessie</button>
         <button class="tab-btn" id="btn-slinky" onclick="openTab(event, 'slinky')">Slinky</button>
-        <button class="tab-btn" id="btn-gangle" onclick="openTab(event, 'gangle')">Gangle</button>
-        <button class="tab-btn" id="btn-caine" onclick="openTab(event, 'caine')">Caine</button>
-        <button class="tab-btn" id="btn-eniac" onclick="openTab(event, 'eniac')">Eniac</button>
-        <button class="tab-btn" id="btn-jax" onclick="openTab(event, 'jax')">Jax</button>
-        <button class="tab-btn" id="btn-zooble" onclick="openTab(event, 'zooble')">Zooble</button>
-        <button class="tab-btn" id="btn-ragatha" onclick="openTab(event, 'ragatha')">Ragatha</button>
-        <button class="tab-btn" id="btn-spiderman" onclick="openTab(event, 'spiderman')">Spider-Man</button>
     </div>
 
     <div class="tab-content">
@@ -234,7 +240,7 @@
         <div id="intro" class="content-panel active">
             <div class="intro-content">
                 <h1>Character Universe</h1>
-                <p>Welcome to the ultimate character.fun! Use the tabs above to explore different characters, or use the search bar to find your favorites instantly.</p>
+                <p>Welcome to the ultimate character directory! Use the navigation menu tabs above to filter out your heroes, or search instantly using the search box above.</p>
             </div>
         </div>
         
@@ -242,7 +248,7 @@
             <div class="character-card">
                 <div class="char-images-col">
                     <img src="https://i.pinimg.com/736x/6b/2f/bb/6b2fbb11ab91a68e86233b462e416213.jpg" alt="Iron Man" class="char-image">
-                    <img src="https://i.pinimg.com/1200x/24/84/70/248470199d7901dd9f5adbed7a6a3932.jpg" alt="Tony Stark" class="char-image">
+                    <img src="https://via.placeholder.com/230x320" alt="Tony Stark" class="char-image">
                 </div>
                 <div class="char-info">
                     <h2>Iron Man</h2>
@@ -251,6 +257,84 @@
                     <p>Tony Stark is played by Robert Downey Junior (RDJ).</p>
                     <p>Iron Man is the superhero identity of Tony Stark. Wearing a high-tech armored suit powered by an Arc Reactor, Iron Man can fly at incredible speeds, fire powerful energy blasts, and use advanced weapons and AI systems. Tony constantly upgrades his suits with new technology, making each version stronger and more capable. As a founding member of the Avengers, Iron Man plays a major role in defending Earth against powerful threats, relying on both his intelligence and determination to overcome challenges.</p>
                     <h5>Iron Man and Tony Stark are owned by Marvel Studios LLC and The Walt Disney Company.</h5>                      
+                </div>
+            </div>
+        </div>
+
+        <div id="captainamerica" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/230x320" alt="Captain America Steve" class="char-image">
+                <div class="char-info">
+                    <h2>Captain America</h2>
+                    <h3>Steve Rogers</h3>
+                    <p>Steve Rogers is a World War II veteran who was transformed into a super-soldier by the Super Soldier Serum, wielding an indestructible Vibranium shield. Defending freedom as Captain America, Steve spent nearly 70 years frozen in ice before waking up in the modern era to lead the Avengers.</p>
+                    <p>Renowned for his unyielding moral compass, bravery, and leadership, Steve fights tirelessly against global tyrannies like Hydra and cosmic threats like Thanos. After the ultimate final conflict in <i>Avengers: Endgame</i>, he travels back in time to live a quiet life with Peggy Carter, passing his iconic shield down to Sam Wilson. Steve Rogers is played by Chris Evans.</p>
+                    <h5>Captain America is owned by Marvel Studios and The Walt Disney Company.</h5>
+                </div>
+            </div>
+        </div>
+
+        <div id="falconcap" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/230x320" alt="Falcon Captain America Sam" class="char-image">
+                <div class="char-info">
+                    <h2>Captain America / Falcon</h2>
+                    <h3>Sam Wilson</h3>
+                    <p>Sam Wilson is a former U.S. Air Force pararescueman who initially served alongside Steve Rogers as the high-flying superhero Falcon, using an advanced mechanical wing suit. Following Steve's retirement, Sam struggles with the complex legacy of taking up the mantle.</p>
+                    <p>As detailed in <i>The Falcon and the Winter Soldier</i>, Sam overcomes structural and personal doubts, fully embracing the role to become the new Captain America. Outfitted with a new Vibranium wing-suit crafted in Wakanda alongside the star-spangled shield, Sam brings flight capability, deep structural empathy, and peak human martial arts to the mantle. Sam Wilson is played by Anthony Mackie.</p>
+                    <h5>Sam Wilson and Captain America are owned by Marvel Studios and The Walt Disney Company.</h5>
+                </div>
+            </div>
+        </div>
+
+        <div id="wintersoldier" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/230x320" alt="Winter Soldier Bucky" class="char-image">
+                <div class="char-info">
+                    <h2>Winter Soldier</h2>
+                    <h3>Bucky Barnes</h3>
+                    <p>James Buchanan "Bucky" Barnes was Steve Rogers' childhood best friend and brother-in-arms during World War II. After falling from a high-speed train, he was captured by Hydra, cybernetically enhanced with a metal arm, and brainwashed into becoming the perfect assassin: The Winter Soldier.</p>
+                    <p>After decades of executing dark black-ops operations under mental control, Bucky breaks free of his programming with Steve's help. He goes on a long journey of redemption, receiving a new Vibranium arm in Wakanda and teaming up with Sam Wilson to fight global threats while overcoming his past trauma. Bucky Barnes is played by Sebastian Stan.</p>
+                    <h5>The Winter Soldier is owned by Marvel Studios and The Walt Disney Company.</h5>
+                </div>
+            </div>
+        </div>
+
+        <div id="vision" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/230x320" alt="Vision" class="char-image">
+                <div class="char-info">
+                    <h2>Vision</h2>
+                    <h3>MCU Synthozoid</h3>
+                    <p>Vision is a powerful synthozoid created by Ultron using a body constructed from synthetic tissue and Vibranium, brought to life by Tony Stark's AI J.A.R.V.I.S., Thor's lightning, and the cosmic energy of the Mind Stone. He is highly logical, deeply philosophical, and uniquely worthy of lifting Thor's hammer, Mjolnir.</p>
+                    <p>Vision forms a deep, tragic romantic bond with Wanda Maximoff (Scarlet Witch). Despite being destroyed by Thanos in <i>Infinity War</i>, his memories and legacy endure through Wanda's grief-induced hex reality and his reconstructed form, White Vision. Vision is portrayed by Paul Bettany.</p>
+                    <h5>Vision is owned by Marvel Studios and The Walt Disney Company.</h5>
+                </div>
+            </div>
+        </div>
+
+        <div id="shinchan" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/230x320" alt="Shin-chan" class="char-image">
+                <div class="char-info">
+                    <h2>Shin-chan</h2>
+                    <h3>Shinnosuke Nohara (Crayon Shin-chan)</h3>
+                    <p>Shinnosuke "Shin-chan" Nohara is the hilarious, mischievous, and wildly inappropriate 5-year-old protagonist of the smash-hit manga and anime series <i>Crayon Shin-chan</i>. Living in Kasukabe, Japan, Shin-chan spends his time driving his parents (Misae and Hiroshi), his sister (Himawari), and his kindergarten teachers completely crazy.</p>
+                    <p>Known for his strange use of formal vocabulary, his bizarre dance steps (like the infamous "butt dance"), and his deep love for Chocobi biscuits and his superhero idol, Action Mask, Shin-chan turns everyday suburban scenarios into chaotic comedy sketches. Despite his cheeky behavior and habit of flirting with older girls, he genuinely cares for his family and his pet dog, Shiro.</p>
+                    <h5>Crayon Shin-chan is created by Yoshito Usui and is owned by Futabasha, Shin-Ei Animation, and TV Asahi.</h5>
+                </div>
+            </div>
+        </div>
+
+        <div id="peppapig" class="content-panel">
+            <div class="character-card">
+                <img src="https://via.placeholder.com/230x320" alt="Peppa Pig" class="char-image">
+                <div class="char-info">
+                    <h2>Peppa Pig</h2>
+                    <h3>Peppa Pig Series</h3>
+                    <p>Peppa Pig is a cheeky, lovable little pig who lives with her little brother George, Mummy Pig, and Daddy Pig. She is four years old and loves nothing more than playing games, dressing up, going on family days out, and visiting her grandparents, Granny and Grandpa Pig.</p>
+                    <p>Her absolute favorite activity in the world is jumping up and down in muddy puddles while wearing her golden boots. She goes to playgroup with her many animal friends, including Suzy Sheep, Danny Dog, and Rebecca Rabbit. Her adventures always end happily with loud snorts of laughter from the whole family.</p>
+                    <h5>Peppa Pig is created by Neville Astley and Mark Baker, and is owned by Entertainment One (eOne) / Hasbro.</h5>
                 </div>
             </div>
         </div>
@@ -279,12 +363,11 @@
 
         <div id="kinger" class="content-panel">
             <div class="character-card">
-                <img src="https://i.pinimg.com/736x/d0/8b/7c/d08b7cd1463a0146f66b39daa6d3d9bd.jpg" alt="Kinger" class="char-image">
-                 <img src="https://i.pinimg.com/736x/27/52/c6/2752c67075e2450eb33c20198b1b927b.jpg" alt="Kier" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Kinger" class="char-image">
                 <div class="char-info">
                     <h2>Kinger</h2>
                     <h3>The Amazing Digital Circus</h3>
-                    <p>Kinger is a supporting character in the Australian-American adult animated psychological comedy series The Amazing Digital Circus, created by Gooseworx and produced by Glitch Productions. Voiced by Sean Chiplock, Kinger is a 48-year-old human trapped in the digital world who takes on the form of a king chess piece. He is the circus's longest-standing human member, having been trapped there significantly longer than the other cast members, which has led to severe mental instability. His real name Grant Best </p>
+                    <p>Kinger is a supporting character in the Australian-American adult animated psychological comedy series The Amazing Digital Circus, created by Gooseworx and produced by Glitch Productions. Voiced by Sean Chiplock, Kinger is a 48-year-old human trapped in the digital world who takes on the form of a king chess piece. He is the circus's longest-standing human member, having been trapped there significantly longer than the other cast members, which has led to severe mental instability.</p>
                     <p>Kinger’s character is defined by his paranoia, anxiety, and forgetfulness, often displaying twitchy behavior and erratic reactions. However, his sanity partially stabilizes when he is engulfed in darkness, a trait that allows him to offer wisdom and compassion during these rare moments of clarity. He has an odd fascination with "insect collections" (bugs), a trait linked to his wife, Queenie, who was an entomologist. Their relationship is central to his backstory; Queenie eventually abstracted (a death-like state in the circus), a traumatic event that Kinger remembers vividly and which contributed to his current mental state.</p>
                     <p>Fans and theories often suggest Kinger may be the creator of the digital circus or a key programmer, given his extensive knowledge of the world’s mechanics, such as how food works. His avatar, a king chess piece, is ironically one of the weaker pieces, protected by the queen, reflecting his reliance on others and perhaps a rift in his marriage with Queenie, whose avatar was a queen piece. Despite his madness, Kinger serves as a comic relief character who also embodies deep trauma, refusing to abstract despite the horrors he has witnessed, including the loss of his wife and other early members like Scratch and Kaufmo.</p>
                     <h6>Kinger is owned by GLITCH Productions and Gooseworx.</h6>
@@ -307,7 +390,7 @@
 
         <div id="woody" class="content-panel">
             <div class="character-card">
-                <img src="https://i.pinimg.com/1200x/b4/de/14/b4de142ecd12c0fcfa7e122849036fa4.jpg" alt="Sheriff Woody" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Sheriff Woody" class="char-image">
                 <div class="char-info">
                     <h2>Sheriff Woody</h2>
                     <h3>Toy Story</h3>
@@ -320,7 +403,7 @@
 
         <div id="jessie" class="content-panel">
             <div class="character-card">
-                <img src="https://i.pinimg.com/1200x/06/9f/72/069f72848ae4b742e6e1634bde108d6f.jpg" alt="Jessie" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Jessie" class="char-image">
                 <div class="char-info">
                     <h2>Jessie</h2>
                     <h3>Toy Story</h3>
@@ -333,7 +416,7 @@
 
         <div id="slinky" class="content-panel">
             <div class="character-card">
-                <img src="https://i.pinimg.com/1200x/82/b4/b0/82b4b0ff9948f44c2c0e96ce69388d52.jpg" alt="Slinky Dog" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Slinky Dog" class="char-image">
                 <div class="char-info">
                     <h2>Slinky Dog</h2>
                     <h3>Toy Story</h3>
@@ -346,12 +429,12 @@
 
         <div id="gangle" class="content-panel">
             <div class="character-card">
-                <img src="https://i.pinimg.com/736x/5e/43/04/5e4304e21d621269b8694a4fc39fe355.jpg" alt="Gangle" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Gangle" class="char-image">
                 <div class="char-info">
                     <h2>Gangle</h2>
                     <h3>The Amazing Digital Circus</h3>
                     <p>Gangle is a supporting character in the dark psychological comedy series The Amazing Digital Circus. Composed almost entirely of a single coiled red ribbon, Gangle wears theater masks that define her current emotional state and personality. She has a porcelain Comedy Mask (which represents her happy self) and a Tragedy Mask (which represents her sad, fragile state).</p>
-                    <p>Unfortunately, Gangle’s happy Comedy Mask is frequently broken by Jax or shattered during chaotic circus activities, leaving her wearing her fragile Tragedy Mask for most of the show. She is highly anxious, emotionally sensitive, and easily pushed around by bolder cast members. Gangle is voiced by Marissa Lenti and brings a tragic, sympathetic layer to the circus's dynamic Her real name is Zoey Raghavan.</p>
+                    <p>Unfortunately, Gangle’s happy Comedy Mask is frequently broken by Jax or shattered during chaotic circus activities, leaving her wearing her fragile Tragedy Mask for most of the show. She is highly anxious, emotionally sensitive, and easily pushed around by bolder cast members. Gangle is voiced by Marissa Lenti and brings a tragic, sympathetic layer to the circus's dynamic.</p>
                     <h6>Gangle and The Amazing Digital Circus are owned by GLITCH Productions and Gooseworx.</h6>
                 </div>
             </div>
@@ -359,7 +442,7 @@
 
         <div id="caine" class="content-panel">
             <div class="character-card">
-                <img src="https://i.pinimg.com/736x/2e/0a/78/2e0a78a990a6a3f5ebed201bbcfc8a33.jpg" alt="Caine" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Caine" class="char-image">
                 <div class="char-info">
                     <h2>Caine</h2>
                     <h3>The Amazing Digital Circus</h3>
@@ -372,25 +455,25 @@
 
         <div id="eniac" class="content-panel">
             <div class="character-card">
-                <img src="https://i.pinimg.com/736x/18/19/28/18192870267214f24ca3fef98bd1f4f2.jpg" alt="Eniac" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Eniac" class="char-image">
                 <div class="char-info">
                     <h2>Eniac</h2>
                     <h3>The Amazing Digital Circus</h3>
-                    <p>Eniac is a mysterious character from the lore surrounding The Amazing Digital Circus. Eniac is a fan representation of the blue ai inside Caine. Eniac is theorized within the fandom to represent the early, primordial architecture of the digital world Caine rules over.</p>
+                    <p>Eniac is a mysterious character from the lore surrounding The Amazing Digital Circus. Named after the historical "ENIAC" (one of the world's very first electronic general-purpose computers developed in the 1940s), Eniac is theorized within the fandom to represent the early, primordial architecture of the digital world Caine rules over.</p>
                     <p>Associated with the ancient, analog origins of the system, Eniac is often connected to the early computer setups seen in the void or the real-world offices of the company that created the VR headset. Her presence represents the haunting reality of old technology left to run indefinitely, harboring deep-seated secrets about why the human souls are trapped within the virtual framework.</p>
-                    <h6></h6></h6>
+                    <h6>Eniac and related Digital Circus lore are owned by GLITCH Productions and Gooseworx.</h6>
                 </div>
             </div>
         </div>
 
         <div id="jax" class="content-panel">
             <div class="character-card">
-                <img src="https://i.pinimg.com/736x/a9/87/3b/a9873ba23a70687e6f98806cc99fe3bb.jpg" alt="Jax" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Jax" class="char-image">
                 <div class="char-info">
                     <h2>Jax</h2>
                     <h3>The Amazing Digital Circus</h3>
-                    <p>Jax is a major supporting character in The Amazing Digital Circus. He takes on the form of a tall, lanky, purple cartoon rabbit wearing pink overalls. Jax is notoriously cynical, mischievous, and enjoys playing mean-spirited pranks on his fellow circus mates, particularly targeting Gangle, Zooble, Raghatha. Jax was once friend with Ribbit and Kaufmo but after pushing Ribbit away caused her to Abstract and also after Kaufmo abstracted, he wanted to abstract and he did in ep 9. A ship called funnybunny ships jax and pomni together</p>
-                    <p>His Real name is Leeroy Mateo He is highly indifferent to the psychological horrors of the circus, preferring to use humor and sarcasm as a defense mechanism to cope with his imprisonment. Despite his abrasive, selfish personality and tendency to dodge responsibilities, Jax remains a fan-favorite character. He is voiced by Michael Kovach.</p>
+                    <p>Jax is a major supporting character in The Amazing Digital Circus. He takes on the form of a tall, lanky, purple cartoon rabbit wearing pink overalls. Jax is notoriously cynical, mischievous, and enjoys playing mean-spirited pranks on his fellow circus mates, particularly targeting Gangle and Kinger.</p>
+                    <p>He is highly indifferent to the psychological horrors of the circus, preferring to use humor and sarcasm as a defense mechanism to cope with his imprisonment. Despite his abrasive, selfish personality and tendency to dodge responsibilities, Jax remains a fan-favorite character. He is voiced by Michael Kovach.</p>
                     <h6>Jax and The Amazing Digital Circus are owned by GLITCH Productions and Gooseworx.</h6>
                 </div>
             </div>
@@ -398,12 +481,12 @@
 
         <div id="zooble" class="content-panel">
             <div class="character-card">
-                <img src="https://i.pinimg.com/736x/a4/a9/86/a4a98621a6539ff1e3755b222d34083b.jpg" alt="Zooble" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Zooble" class="char-image">
                 <div class="char-info">
                     <h2>Zooble</h2>
                     <h3>The Amazing Digital Circus</h3>
-                    <p>Zooble is an irritable, cynical, and deeply detached member of the Digital Circus. Their avatar is a collection of mismatched geometric building blocks and plastic toy limbs, which can easily be taken apart, swapped, or customized. Zooble has a low tolerance for Caine's eccentric adventures and generally opts out of participating in games. Zooble has a strong romantic relationship with Gangle even doing her in the ep9 end credits</p>
-                    <p> Their name is Riley Verselis Though they present a cold, anti-social exterior, Zooble has shown underlying empathy for their friends when situations escalate into genuine danger. They are voiced by Ashley Nichols, adding a highly relatable, dry-witted dynamic to the cast's chaotic ecosystem.</p>
+                    <p>Zooble is an irritable, cynical, and deeply detached member of the Digital Circus. Their avatar is a collection of mismatched geometric building blocks and plastic toy limbs, which can easily be taken apart, swapped, or customized. Zooble has a low tolerance for Caine's eccentric adventures and generally opts out of participating in games.</p>
+                    <p>Though they present a cold, anti-social exterior, Zooble has shown underlying empathy for their friends when situations escalate into genuine danger. They are voiced by Ashley Nichols, adding a highly relatable, dry-witted dynamic to the cast's chaotic ecosystem.</p>
                     <h6>Zooble and The Amazing Digital Circus are owned by GLITCH Productions and Gooseworx.</h6>
                 </div>
             </div>
@@ -411,12 +494,12 @@
 
         <div id="ragatha" class="content-panel">
             <div class="character-card">
-                <img src="https://i.pinimg.com/1200x/22/29/0f/22290fc51688c19efd5e4e0fc47276d0.jpg" alt="Ragatha" class="char-image">
+                <img src="https://via.placeholder.com/230x320" alt="Ragatha" class="char-image">
                 <div class="char-info">
                     <h2>Ragatha</h2>
                     <h3>The Amazing Digital Circus</h3>
-                    <p>Ragatha is a sweet, warm, and optimistic human trapped in the virtual world who takes on the appearance of a classic rag doll. She is characterized by her red yarn hair, a blue-patched dress, and a singular black button eye. Ragatha acts as the emotional anchor of the group, striving to keep a positive outlook to avoid abstracting. Ragatha was once riends with Jax.</p>
-                    <p> Ragatha's real name is Suzie Joanne Ackerman. She is often the first to comfort new arrivals, like Pomni, and works tirelessly to maintain a sense of sanity within Caine’s bizarre world. Despite her kind nature, Ragatha harbors deep fears of abandonment and psychological deterioration. She is voiced by Amanda Hufford.</p>
+                    <p>Ragatha is a sweet, warm, and optimistic human trapped in the virtual world who takes on the appearance of a classic rag doll. She is characterized by her red yarn hair, a blue-patched dress, and a singular black button eye. Ragatha acts as the emotional anchor of the group, striving to keep a positive outlook to avoid abstracting.</p>
+                    <p>She is often the first to comfort new arrivals, like Pomni, and works tirelessly to maintain a sense of sanity within Caine’s bizarre world. Despite her kind nature, Ragatha harbors deep fears of abandonment and psychological deterioration. She is voiced by Amanda Hufford.</p>
                     <h6>Ragatha and The Amazing Digital Circus are owned by GLITCH Productions and Gooseworx.</h6>
                 </div>
             </div>
@@ -425,10 +508,8 @@
         <div id="spiderman" class="content-panel">
             <div class="character-card">
                 <div class="char-images-col">
-                    <img src="https://i.pinimg.com/736x/47/55/3b/47553bedcb13d493271afcccf76dbec1.jpg" alt="Spider-Man Tobey/Andrew" class="char-image">
-                    <img src="https://i.pinimg.com/1200x/4e/cc/85/4ecc85bdb2743e324a56aaf6315636db.jpg" alt="Spider-Man Tom/Miles" class="char-image">
-                     <img src="https://i.pinimg.com/736x/46/31/ce/4631ce05375d32bdbbe3be3710d36839.jpg" alt="Spider-Males" class="char-image">
-                     <img src="https://i.pinimg.com/736x/e6/a4/63/e6a463e6d18e5fa306508c18d0a4ba87.jpg" alt="Sples" class="char-image">
+                    <img src="https://via.placeholder.com/230x320" alt="Spider-Man Tobey/Andrew" class="char-image">
+                    <img src="https://via.placeholder.com/230x320" alt="Spider-Man Tom/Miles" class="char-image">
                 </div>
                 <div class="char-info">
                     <h2>Spider-Man</h2>
@@ -484,6 +565,12 @@
         const input = document.getElementById('searchBar').value.toLowerCase().trim();
         
         const ironBtn = document.getElementById('btn-ironman');
+        const capBtn = document.getElementById('btn-captainamerica');
+        const falconCapBtn = document.getElementById('btn-falconcap');
+        const winterBtn = document.getElementById('btn-wintersoldier');
+        const visionBtn = document.getElementById('btn-vision');
+        const shinBtn = document.getElementById('btn-shinchan');
+        const peppaBtn = document.getElementById('btn-peppapig');
         const pomniBtn = document.getElementById('btn-pomni');
         const kingerBtn = document.getElementById('btn-kinger');
         const buzzBtn = document.getElementById('btn-buzz');
@@ -501,6 +588,12 @@
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
             ironBtn.style.display = "block";
+            capBtn.style.display = "block";
+            falconCapBtn.style.display = "block";
+            winterBtn.style.display = "block";
+            visionBtn.style.display = "block";
+            shinBtn.style.display = "block";
+            peppaBtn.style.display = "block";
             pomniBtn.style.display = "block";
             kingerBtn.style.display = "block";
             buzzBtn.style.display = "block";
@@ -519,7 +612,13 @@
         }
 
         // Determine matches based on input keywords
-        let showIron = "iron man".includes(input) || "tony stark".includes(input);
+        let showIron = "iron man".includes(input) || "tony stark".includes(input) || "mcu".includes(input);
+        let showCap = "captain america".includes(input) || "steve rogers".includes(input) || "cap".includes(input) || "shield".includes(input) || "mcu".includes(input);
+        let showFalconCap = "falcon".includes(input) || "captain america".includes(input) || "sam wilson".includes(input) || "cap".includes(input) || "mcu".includes(input);
+        let showWinter = "winter soldier".includes(input) || "bucky barnes".includes(input) || "bucky".includes(input) || "mcu".includes(input);
+        let showVision = "vision".includes(input) || "synthozoid".includes(input) || "jarvis".includes(input) || "mind stone".includes(input) || "mcu".includes(input);
+        let showShin = "shinchan".includes(input) || "shin-chan".includes(input) || "shinnosuke".includes(input) || "nohara".includes(input) || "crayon".includes(input) || "anime".includes(input);
+        let showPeppa = "peppa".includes(input) || "pig".includes(input) || "george".includes(input) || "cartoon".includes(input) || "puddle".includes(input);
         let showPomni = "pomni".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showKinger = "kinger".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showBuzz = "buzz".includes(input) || "lightyear".includes(input) || "toy story".includes(input);
@@ -532,10 +631,16 @@
         let showJax = "jax".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showZooble = "zooble".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showRagatha = "ragatha".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
-        let showSpiderman = "spiderman".includes(input) || "spider-man".includes(input) || "peter parker".includes(input) || "marvel".includes(input) || "tasm".includes(input) || "mcu".includes(input) || "spiderverse".includes(input) || "spider-verse".includes(input) || "miles".includes(input) || "morales".includes(input) || "holland".includes(input);
+        let showSpiderman = "spiderman".includes(input) || "spider-man".includes(input) || "peter parker".includes(input) || "marvel".includes(input) || "tasm".includes(input) || "mcu".includes(input) || "spiderverse".includes(input) || "spider-verse".includes(input) || "miles".includes(input);
 
         // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
+        capBtn.style.display = showCap ? "block" : "none";
+        falconCapBtn.style.display = showFalconCap ? "block" : "none";
+        winterBtn.style.display = showWinter ? "block" : "none";
+        visionBtn.style.display = showVision ? "block" : "none";
+        shinBtn.style.display = showShin ? "block" : "none";
+        peppaBtn.style.display = showPeppa ? "block" : "none";
         pomniBtn.style.display = showPomni ? "block" : "none";
         kingerBtn.style.display = showKinger ? "block" : "none";
         buzzBtn.style.display = showBuzz ? "block" : "none";
@@ -553,6 +658,12 @@
         // Auto-navigate to matched character panels
         const activeMatches = [
             { show: showIron, id: 'ironman' },
+            { show: showCap, id: 'captainamerica' },
+            { show: showFalconCap, id: 'falconcap' },
+            { show: showWinter, id: 'wintersoldier' },
+            { show: showVision, id: 'vision' },
+            { show: showShin, id: 'shinchan' },
+            { show: showPeppa, id: 'peppapig' },
             { show: showPomni, id: 'pomni' },
             { show: showKinger, id: 'kinger' },
             { show: showBuzz, id: 'Buzz' },
@@ -572,7 +683,6 @@
         if (activeMatches.length === 1) {
             openTab(null, activeMatches[0].id);
         } else {
-            // Otherwise, stay on welcome tab
             openTab(null, 'intro');
         }
     }
