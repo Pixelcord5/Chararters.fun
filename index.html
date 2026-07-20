@@ -745,6 +745,15 @@ In his abstracted form, Kaufmo transforms into a black, rapidly glitching monste
         let showBatman = input.includes("batman") || input.includes("bruce") || input.includes("wayne");
 let showAsh = input.includes("ash") || input.includes("ketchum") || input.includes("pokemon");
 let showKaufmo = input.includes("kaufmo") || input.includes("digital circus");
+        let showSonic =
+    input.includes("sonic") ||
+    input.includes("hedgehog") ||
+    input.includes("sega");
+
+let showBubble =
+    input.includes("bubble") ||
+    input.includes("tadc") ||
+    input.includes("digital circus");
 
         // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
@@ -775,34 +784,33 @@ ashBtn.style.display = showAsh ? "block" : "none";
 kaufmoBtn.style.display = showKaufmo ? "block" : "none";
 
         // Auto-navigate to matched character panels
-        const activeMatches = [
-            { show: showIron, id: 'ironman' },
-            { show: showCap, id: 'captainamerica' },
-            { show: showFalconCap, id: 'falconcap' },
-            { show: showWinter, id: 'wintersoldier' },
-            { show: showVision, id: 'vision' },
-            { show: showShin, id: 'shinchan' },
-            { show: showPeppa, id: 'peppapig' },
-            { show: showPomni, id: 'pomni' },
-            { show: showKinger, id: 'kinger' },
-            { show: showBuzz, id: 'Buzz' },
-            { show: showWoody, id: 'woody' },
-            { show: showJessie, id: 'jessie' },
-            { show: showSlinky, id: 'slinky' },
-            { show: showGangle, id: 'gangle' },
-            { show: showCaine, id: 'caine' },
-            { show: showEniac, id: 'eniac' },
-            { show: showJax, id: 'jax' },
-            { show: showZooble, id: 'zooble' },
-            { show: showRagatha, id: 'ragatha' },
-            { show: showSpiderman, id: 'spiderman' },
-            { show: showBatman, id: 'batman' },
-{ show: showAsh, id: 'ashketchum' },
-{ show: showKaufmo, id: 'kaufmo' },
-        ].filter(item => item.show);
-        { show: showSonic, id: "sonic" },
-        { show: showBubble, id: "bubble" },
-
+    const activeMatches = [
+    { show: showIron, id: 'ironman' },
+    { show: showCap, id: 'captainamerica' },
+    { show: showFalconCap, id: 'falconcap' },
+    { show: showWinter, id: 'wintersoldier' },
+    { show: showVision, id: 'vision' },
+    { show: showShin, id: 'shinchan' },
+    { show: showPeppa, id: 'peppapig' },
+    { show: showPomni, id: 'pomni' },
+    { show: showKinger, id: 'kinger' },
+    { show: showBuzz, id: 'Buzz' },
+    { show: showWoody, id: 'woody' },
+    { show: showJessie, id: 'jessie' },
+    { show: showSlinky, id: 'slinky' },
+    { show: showGangle, id: 'gangle' },
+    { show: showCaine, id: 'caine' },
+    { show: showEniac, id: 'eniac' },
+    { show: showJax, id: 'jax' },
+    { show: showZooble, id: 'zooble' },
+    { show: showRagatha, id: 'ragatha' },
+    { show: showSpiderman, id: 'spiderman' },
+    { show: showBatman, id: 'batman' },
+    { show: showAsh, id: 'ashketchum' },
+    { show: showKaufmo, id: 'kaufmo' },
+    { show: showSonic, id: 'sonic' },
+    { show: showBubble, id: 'bubble' }
+].filter(item => item.show);
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
             openTab(null, activeMatches[0].id);
