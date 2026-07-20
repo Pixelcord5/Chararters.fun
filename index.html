@@ -236,6 +236,8 @@
         <button class="tab-btn" id="btn-batman" onclick="openTab(event, 'batman')">Batman</button>
         <button class="tab-btn" id="btn-ashketchum" onclick="openTab(event, 'ashketchum')">Ash</button>
         <button class="tab-btn" id="btn-kaufmo" onclick="openTab(event, 'kaufmo')">Kaufmo</button>
+        <button class="tab-btn" id="btn-sonic" onclick="openTab(event, 'sonic')">Sonic</button>
+        <button class="tab-btn" id="btn-bubble" onclick="openTab(event, 'bubble')">Bubble</button>
     </div>
 
     <div class="tab-content">
@@ -604,6 +606,35 @@ In his abstracted form, Kaufmo transforms into a black, rapidly glitching monste
         </div>
     </div>
 </div>
+    <div id="sonic" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://i.pinimg.com/1200x/2e/bd/b1/2ebdb155cb928c168b3f4900b6f99e6d.jpg" alt="Sonic" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Sonic the Hedgehog</h2>
+            <h3>Sonic</h3>
+            <p>Sonic is the blue hedgehog hero known for his incredible speed, adventurous spirit, and determination to protect the world from Dr. Eggman. In the movies, He is adopted by Tom and Maddie Wachowski</p>
+            <p>He is one of the most iconic video game characters and stars in the Sonic the Hedgehog franchise.</p>
+            <h5>Sonic the Hedgehog is owned by SEGA.</h5>
+        </div>
+    </div>
+</div>
+
+    <div id="bubble" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://i.pinimg.com/736x/3e/c2/53/3ec2533b3fe60a0c06c82668d4da91c7.jpg" alt="Bubble" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Bubble</h2>
+            <h3>The Amazing Digital Circus</h3>
+            <p>Bubble is Caine's floating assistant in The Amazing Digital Circus. Bubble often appears cheerful, energetic, and eager to help with circus activities. Bubble is the reason that Caine crashed out</p>
+            <p>Despite the playful appearance, Bubble adds to the strange and surreal atmosphere of the digital world. Bubble is voiced by Gooseworx</p>
+            <h5>Bubble and The Amazing Digital Circus are owned by GLITCH Productions and Gooseworx.</h5>
+        </div>
+    </div>
+</div>
 
 <script>
     // Function to handle manual tab switching
@@ -656,6 +687,8 @@ In his abstracted form, Kaufmo transforms into a black, rapidly glitching monste
         const batmanBtn = document.getElementById('btn-batman');
         const ashBtn = document.getElementById('btn-ashketchum');
         const kaufmoBtn = document.getElementById('btn-kaufmo');
+        const sonicBtn = document.getElementById("btn-sonic");
+        const bubbleBtn = document.getElementById("btn-bubble");
 
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
@@ -682,6 +715,8 @@ In his abstracted form, Kaufmo transforms into a black, rapidly glitching monste
             batmanBtn&&(batmanBtn.style.display="block");
             ashBtn&&(ashBtn.style.display="block");
             kaufmoBtn&&(kaufmoBtn.style.display="block");
+            sonicBtn.style.display = "block";
+            bubbleBtn.style.display = "block";
             openTab(null, 'intro');
             return;
         }
@@ -732,6 +767,8 @@ let showKaufmo = input.includes("kaufmo") || input.includes("digital circus");
         zoobleBtn.style.display = showZooble ? "block" : "none";
         ragathaBtn.style.display = showRagatha ? "block" : "none";
         spidermanBtn.style.display = showSpiderman ? "block" : "none";
+        sonicBtn.style.display = showSonic ? "block" : "none";
+        bubbleBtn.style.display = showBubble ? "block" : "none";
         
 batmanBtn.style.display = showBatman ? "block" : "none";
 ashBtn.style.display = showAsh ? "block" : "none";
@@ -763,6 +800,8 @@ kaufmoBtn.style.display = showKaufmo ? "block" : "none";
 { show: showAsh, id: 'ashketchum' },
 { show: showKaufmo, id: 'kaufmo' },
         ].filter(item => item.show);
+        { show: showSonic, id: "sonic" },
+        { show: showBubble, id: "bubble" },
 
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
