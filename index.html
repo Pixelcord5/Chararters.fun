@@ -249,6 +249,7 @@
         <button class="tab-btn" id="btn-kaufmo" onclick="openTab(event, 'kaufmo')">Kaufmo</button>
         <button class="tab-btn" id="btn-sonic" onclick="openTab(event, 'sonic')">Sonic</button>
         <button class="tab-btn" id="btn-bubble" onclick="openTab(event, 'bubble')">Bubble</button>
+         <button class="tab-btn" id="btn-darren" onclick="openTab(event, 'bubble')">Darren</button>
     </div>
 
     <div class="tab-content">
@@ -257,6 +258,7 @@
             <div class="intro-content">
                 <h1>Character Universe</h1>
                 <p>Welcome to the ultimate character directory! Use the navigation menu tabs above to filter out your heroes, or search instantly using the search box above.</p>
+                <p> By Pixelcord5 </p>
                 <P> <a href="updlog.html">
                     
   <button type="button">Update log</button>
@@ -650,6 +652,24 @@ In his abstracted form, Kaufmo transforms into a black, rapidly glitching monste
         </div>
     </div>
 </div>
+
+
+    <div id="darren" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://i.pinimg.com/736x/2a/e0/04/2ae004f5ec512e90d6ce2eb5efad170a.jpg" alt="Darren" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Darren</h2>
+            <h3>Pixelcord5</h3>
+            <p>Darren is a psychotic killer who killed many stickmen and balls. He is purple. </p>
+            <p>He died by lack of oxygen from falling into a trap that lead to a void</p>
+            <h5>Darren is by Pixelcord5.</h5>
+        </div>
+    </div>
+</div>
+
+    
     <footer>
   <p>Made by <a href="https://www.youtube.com/@Pixelcord5" target="_blank">Pixelcord5</a></p>
 </footer>
@@ -707,6 +727,7 @@ In his abstracted form, Kaufmo transforms into a black, rapidly glitching monste
         const kaufmoBtn = document.getElementById('btn-kaufmo');
         const sonicBtn = document.getElementById("btn-sonic");
         const bubbleBtn = document.getElementById("btn-bubble");
+       const darrenBtn = document.getElementById("btn-darren");
 
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
@@ -735,6 +756,7 @@ In his abstracted form, Kaufmo transforms into a black, rapidly glitching monste
             kaufmoBtn&&(kaufmoBtn.style.display="block");
             sonicBtn.style.display = "block";
             bubbleBtn.style.display = "block";
+          darrenBtn.style.display = "block"; 
             openTab(null, 'intro');
             return;
         }
@@ -773,6 +795,12 @@ let showBubble =
     input.includes("tadc") ||
     input.includes("digital circus");
 
+        let showDarren =
+    input.includes("darren") ||
+    input.includes("Pixelcord5") ||
+    input.includes("darrenarc");
+
+       
         // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
         capBtn.style.display = showCap ? "block" : "none";
@@ -796,6 +824,7 @@ let showBubble =
         spidermanBtn.style.display = showSpiderman ? "block" : "none";
         sonicBtn.style.display = showSonic ? "block" : "none";
         bubbleBtn.style.display = showBubble ? "block" : "none";
+        darrenBtn.style.display = showDarren ? "block" : "none";
         
 batmanBtn.style.display = showBatman ? "block" : "none";
 ashBtn.style.display = showAsh ? "block" : "none";
@@ -828,6 +857,7 @@ kaufmoBtn.style.display = showKaufmo ? "block" : "none";
     { show: showKaufmo, id: 'kaufmo' },
     { show: showSonic, id: 'sonic' },
     { show: showBubble, id: 'bubble' }
+     { show: showDarren, id: 'darren' }
 ].filter(item => item.show);
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
