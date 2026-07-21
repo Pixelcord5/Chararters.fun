@@ -249,7 +249,7 @@
         <button class="tab-btn" id="btn-kaufmo" onclick="openTab(event, 'kaufmo')">Kaufmo</button>
         <button class="tab-btn" id="btn-sonic" onclick="openTab(event, 'sonic')">Sonic</button>
         <button class="tab-btn" id="btn-bubble" onclick="openTab(event, 'bubble')">Bubble</button>
-         <button class="tab-btn" id="btn-darren" onclick="openTab(event, 'bubble')">Darren</button>
+         <button class="tab-btn" id="btn-darren" onclick="openTab(event, 'darren')">Darren</button>
     </div>
 
     <div class="tab-content">
@@ -797,7 +797,7 @@ let showBubble =
 
         let showDarren =
     input.includes("darren") ||
-    input.includes("Pixelcord5") ||
+    input.includes("pixelcord5") ||
     input.includes("darrenarc");
 
        
@@ -856,7 +856,7 @@ kaufmoBtn.style.display = showKaufmo ? "block" : "none";
     { show: showAsh, id: 'ashketchum' },
     { show: showKaufmo, id: 'kaufmo' },
     { show: showSonic, id: 'sonic' },
-    { show: showBubble, id: 'bubble' }
+    { show: showBubble, id: 'bubble' },
      { show: showDarren, id: 'darren' }
 ].filter(item => item.show);
         // If there's exactly one match, navigate to it automatically
