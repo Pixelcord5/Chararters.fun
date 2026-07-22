@@ -748,6 +748,7 @@ His expertise is pivotal in addressing the "time-slipping" phenomenon affecting 
         const sonicBtn = document.getElementById("btn-sonic");
         const bubbleBtn = document.getElementById("btn-bubble");
        const darrenBtn = document.getElementById("btn-darren");
+         const ouroborosBtn = document.getElementById("btn-darren");
 
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
@@ -777,6 +778,7 @@ His expertise is pivotal in addressing the "time-slipping" phenomenon affecting 
             sonicBtn.style.display = "block";
             bubbleBtn.style.display = "block";
           darrenBtn.style.display = "block"; 
+             ouroborosBtn.style.display = "block"; 
             openTab(null, 'intro');
             return;
         }
@@ -819,6 +821,12 @@ let showBubble =
     input.includes("darren") ||
     input.includes("pixelcord5") ||
     input.includes("darrenarc");
+         
+        let showOuroboros =
+    input.includes("Loki") ||
+    input.includes("ouroboros") ||
+    input.includes("marvel");
+
 
        
         // Toggle navigation button visibilities
@@ -845,6 +853,7 @@ let showBubble =
         sonicBtn.style.display = showSonic ? "block" : "none";
         bubbleBtn.style.display = showBubble ? "block" : "none";
         darrenBtn.style.display = showDarren ? "block" : "none";
+     ouroborosBtn.style.display = showOuroboros ? "block" : "none";
         
 batmanBtn.style.display = showBatman ? "block" : "none";
 ashBtn.style.display = showAsh ? "block" : "none";
@@ -877,7 +886,8 @@ kaufmoBtn.style.display = showKaufmo ? "block" : "none";
     { show: showKaufmo, id: 'kaufmo' },
     { show: showSonic, id: 'sonic' },
     { show: showBubble, id: 'bubble' },
-     { show: showDarren, id: 'darren' }
+     { show: showDarren, id: 'darren' },
+{ show: showOuroboros, id: 'ouroboros' }
 ].filter(item => item.show);
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
