@@ -688,6 +688,25 @@ His expertise is pivotal in addressing the "time-slipping" phenomenon affecting 
     </div>
 </div>
 
+      <div id="red" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://i.pinimg.com/236x/ee/13/a9/ee13a98423d29856bdd6417e3cedf624.jpg" alt="Darren" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Red</h2>
+            <h3>Among Us Series</h3>
+            <p> Red is the main protagonist of the Paramount+ animated series Among Us, serving as the Captain of the Skeld.  Voiced by Randall Park, Red is a red-colored, short, round-bodied astronaut wearing a dark red pilot uniform, hat, and backpack, along with Crocs™. 
+
+Personality and Role Red is characterized as an arrogant, insecure, and wildly incompetent leader who hides panic behind a confident front.  They heavily rely on the MIRA handbook to maintain authority and deflect blame, often appearing as a "people-pleaser" and blowhard.  Despite their failed leadership and tendency to cover up deaths to protect their reputation, Red genuinely cares for the crew's safety and ultimately rejects the corrupt MIRA Corporation system. He and Purple are the last crewmates alive in the show
+
+Background Before becoming captain, Red was an unpaid intern at MIRA Corporation alongside Purple.  They were involved in a reactor meltdown that destroyed their colony, leading Red to sign a non-disclosure agreement for silence while Purple’s reputation was destroyed.  Red is tasked with transporting Ore+ to Industria, which turns out to be parasitic Impostor eggs, setting the series' murder mystery in motion.  </p>
+            <p>He is voiced by Randell Park</p>
+            <h5>Red is owned by Intersloth, Paramount, CBS Studios and Titmouse Inc. .</h5>
+        </div>
+    </div>
+</div>
+
 
     
     <footer>
@@ -779,6 +798,7 @@ His expertise is pivotal in addressing the "time-slipping" phenomenon affecting 
             bubbleBtn.style.display = "block";
           darrenBtn.style.display = "block"; 
              ouroborosBtn.style.display = "block"; 
+             redBtn.style.display = "block"; 
             openTab(null, 'intro');
             return;
         }
@@ -823,9 +843,14 @@ let showBubble =
     input.includes("darrenarc");
          
         let showOuroboros =
-    input.includes("Loki") ||
+    input.includes("loki") ||
     input.includes("ouroboros") ||
     input.includes("marvel");
+
+                let showRed =
+    input.includes("red") ||
+    input.includes("among us") ||
+    input.includes("cap");
 
 
        
@@ -854,6 +879,7 @@ let showBubble =
         bubbleBtn.style.display = showBubble ? "block" : "none";
         darrenBtn.style.display = showDarren ? "block" : "none";
      ouroborosBtn.style.display = showOuroboros ? "block" : "none";
+            redBtn.style.display = showRed ? "block" : "none";
         
 batmanBtn.style.display = showBatman ? "block" : "none";
 ashBtn.style.display = showAsh ? "block" : "none";
@@ -887,7 +913,8 @@ kaufmoBtn.style.display = showKaufmo ? "block" : "none";
     { show: showSonic, id: 'sonic' },
     { show: showBubble, id: 'bubble' },
      { show: showDarren, id: 'darren' },
-{ show: showOuroboros, id: 'ouroboros' }
+{ show: showOuroboros, id: 'ouroboros' },
+{ show: showRed, id: 'red' }
 ].filter(item => item.show);
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
