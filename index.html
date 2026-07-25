@@ -792,9 +792,9 @@ Background Before becoming captain, Red was an unpaid intern at MIRA Corporation
             zoobleBtn.style.display = "block";
             ragathaBtn.style.display = "block";
             spidermanBtn.style.display = "block";
-            batmanBtn&&(batmanBtn.style.display="block");
-            ashBtn&&(ashBtn.style.display="block");
-            kaufmoBtn&&(kaufmoBtn.style.display="block");
+          ashBtn.style.display = "block";
+            kaufmoBtn.style.display = "block";
+            batmanBtn.style.display = "block";
             sonicBtn.style.display = "block";
             bubbleBtn.style.display = "block";
           darrenBtn.style.display = "block"; 
@@ -825,9 +825,23 @@ Background Before becoming captain, Red was an unpaid intern at MIRA Corporation
         let showZooble = "zooble".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showRagatha = "ragatha".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showSpiderman = "spiderman".includes(input) || "spider-man".includes(input) || "peter parker".includes(input) || "marvel".includes(input) || "tasm".includes(input) || "mcu".includes(input) || "spiderverse".includes(input) || "spider-verse".includes(input) || "miles".includes(input);
-        let showBatman = input.includes("batman") || input.includes("bruce") || input.includes("wayne");
-let showAsh = input.includes("ash") || input.includes("ketchum") || input.includes("pokemon");
-let showKaufmo = input.includes("kaufmo") || input.includes("digital circus");
+
+        
+        let showKaufmo =
+    input.includes("tadc") ||
+    input.includes("kaufmo") ||
+    input.includes("digital circus");
+
+                let showAsh =
+    input.includes("ash") ||
+    input.includes("pokemon") ||
+    input.includes("pikachu");
+
+                        let showBatman =
+    input.includes("batman") ||
+    input.includes("bruce wayne") ||
+    input.includes("dc");
+
         let showSonic =
     input.includes("sonic") ||
     input.includes("hedgehog") ||
@@ -852,6 +866,11 @@ let showBubble =
     input.includes("red") ||
     input.includes("among us") ||
     input.includes("cap");
+
+                        let showWanda =
+    input.includes("wanda") ||
+    input.includes("marvel") ||
+    input.includes("red");
 
 
        
@@ -881,6 +900,7 @@ let showBubble =
         darrenBtn.style.display = showDarren ? "block" : "none";
      ouroborosBtn.style.display = showOuroboros ? "block" : "none";
             redBtn.style.display = showRed ? "block" : "none";
+          wandaBtn.style.display = showWanda ? "block" : "none";
         
 batmanBtn.style.display = showBatman ? "block" : "none";
 ashBtn.style.display = showAsh ? "block" : "none";
@@ -916,6 +936,7 @@ kaufmoBtn.style.display = showKaufmo ? "block" : "none";
      { show: showDarren, id: 'darren' },
 { show: showOuroboros, id: 'ouroboros' },
 { show: showRed, id: 'red' }
+{ show: showwWanda, id: 'red' }
 ].filter(item => item.show);
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
