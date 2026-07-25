@@ -252,6 +252,7 @@
          <button class="tab-btn" id="btn-darren" onclick="openTab(event, 'darren')">Darren</button>
           <button class="tab-btn" id="btn-ouroboros" onclick="openTab(event, 'ouroboros')">Ouroboros</button>
           <button class="tab-btn" id="btn-red" onclick="openTab(event, 'red')">Red (Among Us)</button>
+          <button class="tab-btn" id="btn-wanda" onclick="openTab(event, 'wanda')">Wanda</button>
     </div>
 
     <div class="tab-content">
@@ -675,7 +676,7 @@ In his abstracted form, Kaufmo transforms into a black, rapidly glitching monste
     <div id="ouroboros" class="content-panel">
     <div class="character-card">
         <div class="char-images-col">
-            <img src="https://i.pinimg.com/736x/6d/21/40/6d21402dbaf90f0a3a63a9f24ff2907e.jpg" alt="Darren" class="char-image">
+            <img src="https://i.pinimg.com/736x/6d/21/40/6d21402dbaf90f0a3a63a9f24ff2907e.jpg" alt="ob" class="char-image">
         </div>
         <div class="char-info">
             <h2>Ouroboros</h2>
@@ -692,7 +693,7 @@ His expertise is pivotal in addressing the "time-slipping" phenomenon affecting 
       <div id="red" class="content-panel">
     <div class="character-card">
         <div class="char-images-col">
-            <img src="https://i.pinimg.com/236x/ee/13/a9/ee13a98423d29856bdd6417e3cedf624.jpg" alt="Darren" class="char-image">
+            <img src="https://i.pinimg.com/236x/ee/13/a9/ee13a98423d29856bdd6417e3cedf624.jpg" alt="red" class="char-image">
         </div>
         <div class="char-info">
             <h2>Red</h2>
@@ -707,6 +708,26 @@ Background Before becoming captain, Red was an unpaid intern at MIRA Corporation
         </div>
     </div>
 </div>
+
+          <div id="wanda" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://i.pinimg.com/736x/f4/7b/84/f47b84b9bbf4d408f59aa53f9d7567c2.jpg" alt="Wanda" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Wanda</h2>
+            <h3>aWanda Maximof</h3>
+            <p> Wanda Maximoff, portrayed by Elizabeth Olsen, is a Sokovian orphan and one of the most powerful members of the Marvel Cinematic Universe (MCU).  Initially introduced in Captain America: The Winter Soldier, she is depicted as a twin sister to Pietro Maximoff who volunteered for HYDRA experiments involving the Mind Stone, which unlocked her latent abilities in chaos magic, telekinesis, and telepathy. 
+
+After defecting from Ultron to join the Avengers, Wanda develops a romantic relationship with Vision before his death in Avengers: Infinity War.  Grief-stricken and unstable following the Blip, she creates the Hex in WandaVision, trapping the town of Westview in a reality-warping sitcom illusion where she lives with a resurrected Vision and their twin sons, Billy and Tommy. 
+
+The series culminates in Wanda embracing her prophesied identity as the Scarlet Witch, a being capable of spontaneously altering reality.  Although she initially attempts to steal multiverse-traveling powers from America Chavez in Doctor Strange in the Multiverse of Madness to reunite with her children, she ultimately sacrifices herself to destroy all copies of the Darkhold across the multiverse. </p>
+   
+            <h5>Wanda Maximoff is owned by Marvel, Disney .</h5>
+        </div>
+    </div>
+</div>
+
 
 
     
@@ -768,7 +789,8 @@ Background Before becoming captain, Red was an unpaid intern at MIRA Corporation
         const sonicBtn = document.getElementById("btn-sonic");
         const bubbleBtn = document.getElementById("btn-bubble");
        const darrenBtn = document.getElementById("btn-darren");
-         const ouroborosBtn = document.getElementById("btn-darren");
+         const ouroborosBtn = document.getElementById("btn-ouroboros");
+      const wandaBtn = document.getElementById("btn-wanda");
 
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
@@ -800,6 +822,7 @@ Background Before becoming captain, Red was an unpaid intern at MIRA Corporation
           darrenBtn.style.display = "block"; 
              ouroborosBtn.style.display = "block"; 
              redBtn.style.display = "block"; 
+             wandaBtn.style.display = "block"; 
             openTab(null, 'intro');
             return;
         }
@@ -936,7 +959,7 @@ kaufmoBtn.style.display = showKaufmo ? "block" : "none";
      { show: showDarren, id: 'darren' },
 { show: showOuroboros, id: 'ouroboros' },
 { show: showRed, id: 'red' }
-{ show: showwWanda, id: 'red' }
+{ show: showWanda, id: 'wanda' }
 ].filter(item => item.show);
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
