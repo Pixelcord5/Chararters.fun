@@ -254,6 +254,7 @@
           <button class="tab-btn" id="btn-red" onclick="openTab(event, 'red')">Red (Among Us)</button>
           <button class="tab-btn" id="btn-wanda" onclick="openTab(event, 'wanda')">Wanda</button>
          <button class="tab-btn" id="btn-thor" onclick="openTab(event, 'thor')">Thor</button>
+          <button class="tab-btn" id="btn-wumpus" onclick="openTab(event, 'wumpus')">Wumpus (Discord)</button>
     </div>
 
     <div class="tab-content">
@@ -759,6 +760,25 @@ In the MCU, Thor is an arrogant warrior who learns humility after being exiled t
     </div>
 </div>
 
+                  <div id="wumpus" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://i.pinimg.com/736x/6f/fb/b7/6ffbb7a1a34c386cc07ec69d2f6b8c24.jpg" alt="wumpus" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Wumpus</h2>
+            <h3>Discord Mascot</h3>
+            <p> Wumpus is the official mascot of Discord, depicted as a blue or lilac-colored, pig-like creature with a round body, small tusks, and a leaf on its head.  While his exact species is deliberately ambiguous, he is often described as a friendly monster native to the digital world of Discord. He is primarily used in branding, stickers, and easter eggs, such as waving to new users who join a server or greeting users in empty direct message threads. 
+
+The character's name and visual design are believed to originate from the 1973 video game Hunt the Wumpus, with specific similarities to the graphical variation for the TI-99/4A home computer.  Originally designed as a "blank slate" with no friends, Wumpus has evolved to become a welcoming face of the platform, often associated with Discord Nitro promotions where he is seen wearing a cape or flying through space. 
+
+Wumpus is frequently paired with other Discord mascots, most notably Nelly the Robot (a cat-like character he is romantically linked to) and Clyde (Discord's sentient logo bot).  His role extends beyond branding; he appears in mini-games like Putt Party, serves as a guide for community safety, and has starred in the Wumpus Wonderventures webcomic, where he is portrayed as a time-traveling character.  </p>
+   
+            <h5> Wumpus is owned by Discord .</h5>
+        </div>
+    </div>
+</div>
+
 
 
 
@@ -826,6 +846,7 @@ In the MCU, Thor is an arrogant warrior who learns humility after being exiled t
          const ouroborosBtn = document.getElementById("btn-ouroboros");
       const wandaBtn = document.getElementById("btn-wanda");
               const thorBtn = document.getElementById("btn-thor");
+         const wumpusBtn = document.getElementById("btn-wumpus");
 
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
@@ -859,6 +880,7 @@ In the MCU, Thor is an arrogant warrior who learns humility after being exiled t
              redBtn.style.display = "block"; 
              wandaBtn.style.display = "block"; 
              thorBtn.style.display = "block"; 
+             wumpusBtn.style.display = "block"; 
             openTab(null, 'intro');
             return;
         }
@@ -936,6 +958,11 @@ let showBubble =
     input.includes("marvel") ||
     input.includes("odinson");
 
+                 let showWumpus=
+    input.includes("Wumpus") ||
+    input.includes("discord") ||
+    input.includes("mascot");
+
 
        
         // Toggle navigation button visibilities
@@ -966,6 +993,7 @@ let showBubble =
             redBtn.style.display = showRed ? "block" : "none";
           wandaBtn.style.display = showWanda ? "block" : "none";
         thorBtn.style.display = showThor ? "block" : "none";
+            wumpusBtn.style.display = showWumpus ? "block" : "none";
         
 batmanBtn.style.display = showBatman ? "block" : "none";
 ashBtn.style.display = showAsh ? "block" : "none";
@@ -1002,7 +1030,8 @@ kaufmoBtn.style.display = showKaufmo ? "block" : "none";
 { show: showOuroboros, id: 'ouroboros' },
 { show: showRed, id: 'red' },
 { show: showWanda, id: 'wanda' },
-{ show: showThor, id: 'wanda' }
+{ show: showThor, id: 'thor' },
+{ show: showWumpus, id: 'wumpus' }
 ].filter(item => item.show);
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
