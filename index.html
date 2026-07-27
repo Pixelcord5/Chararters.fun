@@ -253,13 +253,14 @@
           <button class="tab-btn" id="btn-ouroboros" onclick="openTab(event, 'ouroboros')">Ouroboros</button>
           <button class="tab-btn" id="btn-red" onclick="openTab(event, 'red')">Red (Among Us)</button>
           <button class="tab-btn" id="btn-wanda" onclick="openTab(event, 'wanda')">Wanda</button>
+         <button class="tab-btn" id="btn-thor" onclick="openTab(event, 'thor')">Thor</button>
     </div>
 
     <div class="tab-content">
         
         <div id="intro" class="content-panel active">
             <div class="intro-content">
-                <h1>Character.fun</h1>
+                <h1>Characters.fun</h1>
                 <p>Welcome to Characters.fun Use the navigation menu tabs above to filter out your heroes, or search instantly using the search box above.</p>
                 <p> By Pixelcord5 </p>
                 <P> <a href="updlog.html">
@@ -602,8 +603,12 @@ Freight Car (Товарный вагон)</p>
         <div class="char-info">
             <h2>Ash Ketchum</h2>
             <h3>Pokémon Trainer</h3>
-            <p>Ash Ketchum is the main protagonist in the Pokémon anime series. He is a passionate Pokémon trainer from Pallet Town, aspiring to become a Pokémon Master. Over the series, Ash travels across various regions, catching new Pokémon, competing in leagues, and battling Gym Leaders.</p>
-            <p>Ash is known for his determination, kindness, and unwavering friendship with Pikachu and other Pokémon. He is voiced by Veronica Taylor (English) and many other voice actors in different seasons.</p>
+            <p>Ash Ketchum (Japanese: Satoshi) is the main protagonist of the Pokémon anime series, a 10-year-old trainer from Pallet Town in the Kanto region who has spent over two decades pursuing his dream of becoming a Pokémon Master.  His journey began when he arrived late for his starter selection and was left with a disobedient Pikachu, a bond that solidified after Ash risked his safety to protect Pikachu from a flock of Spearows.  This relationship serves as the emotional core of his story, with Pikachu remaining his only companion across every region he visits. 
+
+Personality-wise, Ash is characterized by his high extraversion, enthusiasm, and unwavering determination, often displaying high conscientiousness in his training and openness to new experiences.  While initially brash, impulsive, and hot-headed, he matures significantly over the series, learning to check his temper and develop more complex battle strategies.  He is deeply selfless, compassionate, and fair-minded, often prioritizing the well-being of Pokémon and friendship over victory, and he disregards traditional type advantages in favor of trusting his Pokémon's individual strengths. 
+
+Ash’s competitive career spans seven major Pokémon Leagues, resulting in victories at the Orange League, the Kanto Battle Frontier, and the Alola Pokémon League, where he became the first Champion.  His pinnacle achievement occurred in the World Coronation Series, where he defeated the previous Monarch, Leon, in the Masters Eight Tournament to become the new World Champion and the strongest trainer in the Pokémon world.  He shares his Japanese name with Pokémon creator Satoshi Tajiri and his English surname is a pun on the franchise's motto, "Gotta catch 'em all!" </p>
+            <p> He is voiced by Veronica Taylor and Sarah Natochenny in English and Rica Matsumoto in Japanese</p>
             <h5>Ash Ketchun is owned by The Pokémon Company and Nintendo.</h5>
         </div>
     </div>
@@ -716,7 +721,7 @@ Background Before becoming captain, Red was an unpaid intern at MIRA Corporation
         </div>
         <div class="char-info">
             <h2>Wanda</h2>
-            <h3>aWanda Maximof</h3>
+            <h3>Wanda Maximof</h3>
             <p> Wanda Maximoff, portrayed by Elizabeth Olsen, is a Sokovian orphan and one of the most powerful members of the Marvel Cinematic Universe (MCU).  Initially introduced in Captain America: The Winter Soldier, she is depicted as a twin sister to Pietro Maximoff who volunteered for HYDRA experiments involving the Mind Stone, which unlocked her latent abilities in chaos magic, telekinesis, and telepathy. 
 
 After defecting from Ultron to join the Avengers, Wanda develops a romantic relationship with Vision before his death in Avengers: Infinity War.  Grief-stricken and unstable following the Blip, she creates the Hex in WandaVision, trapping the town of Westview in a reality-warping sitcom illusion where she lives with a resurrected Vision and their twin sons, Billy and Tommy. 
@@ -727,6 +732,27 @@ The series culminates in Wanda embracing her prophesied identity as the Scarlet 
         </div>
     </div>
 </div>
+
+              <div id="thor" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://i.pinimg.com/1200x/0b/a3/87/0ba387ff75e5a5a3ccea99b05dd5faf2.jpg" alt="thor" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Thor</h2>
+            <h3>Thor Odinson</h3>
+            <p> Thor Odinson, the God of Thunder, is a fictional superhero created by Stan Lee, Larry Lieber, and Jack Kirby, debuting in Journey into Mystery #83 in August 1962.  He is an Asgardian prince, the son of Odin and Frigga, and a founding member of the Avengers.  In both Marvel Comics and the Marvel Cinematic Universe (MCU), Thor is depicted as one of the most powerful beings in the universe, wielding the enchanted hammer Mjolnir to control lightning, storms, and weather. 
+
+In the comics, Thor’s origin involves being banished to Earth as the mortal doctor Donald Blake to learn humility before regaining his powers.  He possesses superhuman strength, durability, and near-immortality, often fighting cosmic threats like Galactus and Thanos.  The comics feature multiple iterations of the character, including Jane Foster and Eric Masterson, who have wielded Mjolnir or merged with Thor, and he is sometimes depicted as a hybrid of Asgardian and Elder God heritage. 
+
+In the MCU, Thor is an arrogant warrior who learns humility after being exiled to Earth and falling in love with scientist Jane Foster.  He joins the Avengers to defeat Loki and the Chitauri, later becoming King of Asgard before destroying his realm to save his people.  His MCU arc includes defeating Thanos with the axe Stormbreaker, struggling with depression, and eventually passing the crown to Valkyrie to join the Guardians of the Galaxy, where he confronts threats like Gorr the God Butcher.  </p>
+   
+            <p>Thor is played by Chris Hemsworth</p>
+            <h5>Thor Odinson is owned by Marvel, Disney .</h5>
+        </div>
+    </div>
+</div>
+
 
 
 
@@ -793,6 +819,7 @@ The series culminates in Wanda embracing her prophesied identity as the Scarlet 
        const darrenBtn = document.getElementById("btn-darren");
          const ouroborosBtn = document.getElementById("btn-ouroboros");
       const wandaBtn = document.getElementById("btn-wanda");
+              const thorBtn = document.getElementById("btn-thor");
 
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
@@ -825,6 +852,7 @@ The series culminates in Wanda embracing her prophesied identity as the Scarlet 
              ouroborosBtn.style.display = "block"; 
              redBtn.style.display = "block"; 
              wandaBtn.style.display = "block"; 
+             thorBtn.style.display = "block"; 
             openTab(null, 'intro');
             return;
         }
@@ -897,6 +925,11 @@ let showBubble =
     input.includes("marvel") ||
     input.includes("red");
 
+          let showThor =
+    input.includes("thor") ||
+    input.includes("marvel") ||
+    input.includes("odinson");
+
 
        
         // Toggle navigation button visibilities
@@ -926,6 +959,7 @@ let showBubble =
      ouroborosBtn.style.display = showOuroboros ? "block" : "none";
             redBtn.style.display = showRed ? "block" : "none";
           wandaBtn.style.display = showWanda ? "block" : "none";
+        thorBtn.style.display = showThor ? "block" : "none";
         
 batmanBtn.style.display = showBatman ? "block" : "none";
 ashBtn.style.display = showAsh ? "block" : "none";
@@ -961,7 +995,8 @@ kaufmoBtn.style.display = showKaufmo ? "block" : "none";
      { show: showDarren, id: 'darren' },
 { show: showOuroboros, id: 'ouroboros' },
 { show: showRed, id: 'red' },
-{ show: showWanda, id: 'wanda' }
+{ show: showWanda, id: 'wanda' },
+{ show: showThor, id: 'wanda' }
 ].filter(item => item.show);
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
