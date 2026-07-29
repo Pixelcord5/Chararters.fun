@@ -255,6 +255,7 @@
           <button class="tab-btn" id="btn-wanda" onclick="openTab(event, 'wanda')">Wanda</button>
          <button class="tab-btn" id="btn-thor" onclick="openTab(event, 'thor')">Thor</button>
           <button class="tab-btn" id="btn-wumpus" onclick="openTab(event, 'wumpus')">Wumpus (Discord)</button>
+         <button class="tab-btn" id="btn-ben" onclick="openTab(event, 'ben')">Ben</button>
     </div>
 
     <div class="tab-content">
@@ -778,6 +779,23 @@ Wumpus is frequently paired with other Discord mascots, most notably Nelly the R
         </div>
     </div>
 </div>
+ 
+                  <div id="ben" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://i.pinimg.com/736x/89/48/b4/8948b447eb5a65a9eec168e26b26416c.jpg" alt="ben" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Ben</h2>
+            <h3>Ben and Holly</h3>
+            <p> Ben Elf is a kind, brave, and resourceful 8-year-old elf who serves as one of the two titular protagonists in Ben & Holly's Little Kingdom, alongside his best friend, Princess Holly.  Voiced by Preston Nyman, Ben lives in the Great Elf Tree with his parents, Mr and Mrs Elf, and is characterized by his dislike of magic, preferring to do things "the elf way" by building, fixing, and making toys. 
+
+While Holly uses magic which often leads to chaotic mistakes, Ben’s practical skills and self-control are essential for resolving their adventures. He is depicted as a conscientious friend who values teamwork, often using his ingenuity to help Holly out of scrapes while maintaining a cheerful and gentle demeanor.  </p>
+   
+            <h5> Ben is owned Astley Baker Davies and Entertainment One .</h5>
+        </div>
+    </div>
+</div>
 
 
 
@@ -847,7 +865,7 @@ Wumpus is frequently paired with other Discord mascots, most notably Nelly the R
       const wandaBtn = document.getElementById("btn-wanda");
               const thorBtn = document.getElementById("btn-thor");
          const wumpusBtn = document.getElementById("btn-wumpus");
-
+    const benBtn = document.getElementById("btn-ben");
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
             ironBtn.style.display = "block";
@@ -881,6 +899,7 @@ Wumpus is frequently paired with other Discord mascots, most notably Nelly the R
              wandaBtn.style.display = "block"; 
              thorBtn.style.display = "block"; 
              wumpusBtn.style.display = "block"; 
+             wumpusBtn.style.display = "ben"; 
             openTab(null, 'intro');
             return;
         }
@@ -959,9 +978,14 @@ let showBubble =
     input.includes("odinson");
 
                  let showWumpus=
-    input.includes("Wumpus") ||
+    input.includes("wumpus") ||
     input.includes("discord") ||
     input.includes("mascot");
+
+                         let showBen=
+    input.includes("ben") ||
+    input.includes("kid") ||
+    input.includes("elf);
 
 
        
@@ -994,6 +1018,7 @@ let showBubble =
           wandaBtn.style.display = showWanda ? "block" : "none";
         thorBtn.style.display = showThor ? "block" : "none";
             wumpusBtn.style.display = showWumpus ? "block" : "none";
+               benBtn.style.display = showBen ? "block" : "none";
         
 batmanBtn.style.display = showBatman ? "block" : "none";
 ashBtn.style.display = showAsh ? "block" : "none";
@@ -1031,7 +1056,8 @@ kaufmoBtn.style.display = showKaufmo ? "block" : "none";
 { show: showRed, id: 'red' },
 { show: showWanda, id: 'wanda' },
 { show: showThor, id: 'thor' },
-{ show: showWumpus, id: 'wumpus' }
+{ show: showWumpus, id: 'wumpus' },
+{ show: showBen, id: 'ben' }
 ].filter(item => item.show);
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
