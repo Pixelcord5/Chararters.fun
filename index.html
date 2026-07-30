@@ -256,6 +256,7 @@
          <button class="tab-btn" id="btn-thor" onclick="openTab(event, 'thor')">Thor</button>
           <button class="tab-btn" id="btn-wumpus" onclick="openTab(event, 'wumpus')">Wumpus (Discord)</button>
          <button class="tab-btn" id="btn-ben" onclick="openTab(event, 'ben')">Ben</button>
+        <button class="tab-btn" id="btn-benten" onclick="openTab(event, 'benten')">Ben</button>
     </div>
 
     <div class="tab-content">
@@ -797,13 +798,31 @@ While Holly uses magic which often leads to chaotic mistakes, Ben’s practical 
     </div>
 </div>
 
+      <div id="benten" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://i.pinimg.com/736x/c6/9a/bc/c69abca74f4d0d006fc8f3c83c7f91c9.jpg" alt="benten" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Ben</h2>
+            <h3>Ben 10</h3>
+            <p>Benjamin "Ben" Tennyson is the titular protagonist of the Ben 10 franchise, originally introduced as a 10-year-old boy from Bellwood who discovers the Omnitrix, a powerful watch-like device that allows him to transform into various alien species.  Initially portrayed as immature, cocky, and attention-seeking, Ben uses humor to mask his fears and often acts impulsively, but he possesses a strong moral compass and a genuine desire to help others, even at great personal risk. 
+
+As the series progresses, Ben matures into a responsible hero and leader, gaining fame across Earth and the universe.  He is characterized by his above-average intelligence, sharp memory, and adaptability, often relying on quick thinking rather than just the Omnitrix’s powers.  By age 16, he has become a deputized member of the Plumbers and wields advanced versions of the device, including the Ultimatrix and the Completed Omnitrix, solidifying his status as a renowned intergalactic protector. </p>
+
+            <P>Ben Tennyson is  voiced by Tara Strong (ages 10–11) and Yuri Lowenthal (ages 15–16) </P>
+   
+            <h5>Ben 10 is owned by Warner Bros.  Discovery through its subsidiary The Cartoon Network, Inc..</h5>
+        </div>
+    </div>
+</div>
 
 
 
     
     <footer>
-  <p>Made by <a href="https://www.youtube.com/@Pixelcord5" target="_blank">Pixelcord5</a> <br>
-      Characters.fun 2026
+  <p>Made by <a href="https://www.youtube.com/@Pixelcord5" target="_blank">Pixelcord5</a> 
+  
   </p>
 </footer>
 
@@ -866,6 +885,7 @@ While Holly uses magic which often leads to chaotic mistakes, Ben’s practical 
               const thorBtn = document.getElementById("btn-thor");
          const wumpusBtn = document.getElementById("btn-wumpus");
     const benBtn = document.getElementById("btn-ben");
+            const bentenBtn = document.getElementById("btn-benten");
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
             ironBtn.style.display = "block";
@@ -900,6 +920,7 @@ While Holly uses magic which often leads to chaotic mistakes, Ben’s practical 
              thorBtn.style.display = "block"; 
              wumpusBtn.style.display = "block"; 
              benBtn.style.display = "ben"; 
+             bentenBtn.style.display = "benten"; 
             openTab(null, 'intro');
             return;
         }
@@ -987,6 +1008,11 @@ let showBubble =
     input.includes("kid") ||
     input.includes("elf");
 
+                             let showBenten=
+    input.includes("ben") ||
+    input.includes("10") ||
+    input.includes("ben ten");
+
 
        
         // Toggle navigation button visibilities
@@ -1019,6 +1045,7 @@ let showBubble =
         thorBtn.style.display = showThor ? "block" : "none";
             wumpusBtn.style.display = showWumpus ? "block" : "none";
                benBtn.style.display = showBen ? "block" : "none";
+         bentenBtn.style.display = showBenten ? "block" : "none";
         
 batmanBtn.style.display = showBatman ? "block" : "none";
 ashBtn.style.display = showAsh ? "block" : "none";
@@ -1057,7 +1084,8 @@ kaufmoBtn.style.display = showKaufmo ? "block" : "none";
 { show: showWanda, id: 'wanda' },
 { show: showThor, id: 'thor' },
 { show: showWumpus, id: 'wumpus' },
-{ show: showBen, id: 'ben' }
+{ show: showBen, id: 'ben' },
+{ show: showBenten, id: 'benten' }
 ].filter(item => item.show);
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
