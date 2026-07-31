@@ -257,6 +257,7 @@
           <button class="tab-btn" id="btn-wumpus" onclick="openTab(event, 'wumpus')">Wumpus (Discord)</button>
          <button class="tab-btn" id="btn-ben" onclick="openTab(event, 'ben')">Ben</button>
         <button class="tab-btn" id="btn-benten" onclick="openTab(event, 'benten')">Ben</button>
+        <button class="tab-btn" id="btn-dustin" onclick="openTab(event, 'dustin')">Dustin</button>
     </div>
 
     <div class="tab-content">
@@ -815,15 +816,30 @@ As the series progresses, Ben matures into a responsible hero and leader, gainin
             <h5>Ben 10 is owned by Warner Bros.  Discovery through its subsidiary The Cartoon Network, Inc..</h5>
         </div>
     </div>
-</div>
+ </div>
 
+          <div id="dustin" class="content-panel">
+    <div class="character-card">
+        <div class="char-images-col">
+            <img src="https://i.pinimg.com/736x/ab/a5/4d/aba54ddd77233ec5e3d3d2673ccccbe5.jpg" alt="dustin" class="char-image">
+        </div>
+        <div class="char-info">
+            <h2>Dustin</h2>
+            <h3>Dustin Henderson</h3>
+            <p>Dustin Henderson, is the intelligent, loyal, and humorous heart of the Stranger Things ensemble, conceived by the Duffer Brothers to subvert the "nerdy sidekick" trope by elevating a character with cleidocranial dysplasia to a central, brilliant leader.  Known for his boundless curiosity, scientific aptitude, and role as the party’s Bard, Dustin provides crucial problem-solving skills—such as building radios and decoding messages—while serving as the group’s emotional anchor and comic relief.  His character arc is defined by deep friendships with Steve Harrington and the late Eddie Munson, showcasing a journey from a confident, optimistic kid to a mature individual who channels grief into heroic resilience, ultimately proving that kindness, intelligence, and loyalty are as powerful as any supernatural ability. </p>
+
+            <P>Dustin is played by  Gaten Matarazzo</P>
+   
+            <h5>Dustin Henderson is owned by Netflix</h5>
+        </div>
+    </div>
+</div>
 
 
     
     <footer>
   <p>Made by <a href="https://www.youtube.com/@Pixelcord5" target="_blank">Pixelcord5</a> 
-  
-  </p>
+ </p>
 </footer>
 
 <script>
@@ -886,6 +902,7 @@ As the series progresses, Ben matures into a responsible hero and leader, gainin
          const wumpusBtn = document.getElementById("btn-wumpus");
     const benBtn = document.getElementById("btn-ben");
             const bentenBtn = document.getElementById("btn-benten");
+         const dustinBtn = document.getElementById("btn-dustin");
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
             ironBtn.style.display = "block";
@@ -921,6 +938,7 @@ As the series progresses, Ben matures into a responsible hero and leader, gainin
              wumpusBtn.style.display = "block"; 
              benBtn.style.display = "ben"; 
              bentenBtn.style.display = "benten"; 
+                 dustinBtn.style.display = "dustin"; 
             openTab(null, 'intro');
             return;
         }
@@ -1013,6 +1031,12 @@ let showBubble =
     input.includes("10") ||
     input.includes("ben ten");
 
+                                    let showDustin=
+    input.includes("dustin") ||
+    input.includes("stranger things") ||
+    input.includes("dustin henderson");
+
+
 
        
         // Toggle navigation button visibilities
@@ -1046,6 +1070,7 @@ let showBubble =
             wumpusBtn.style.display = showWumpus ? "block" : "none";
                benBtn.style.display = showBen ? "block" : "none";
          bentenBtn.style.display = showBenten ? "block" : "none";
+ dustinBtn.style.display = showDustin ? "block" : "none";
         
 batmanBtn.style.display = showBatman ? "block" : "none";
 ashBtn.style.display = showAsh ? "block" : "none";
@@ -1085,7 +1110,8 @@ kaufmoBtn.style.display = showKaufmo ? "block" : "none";
 { show: showThor, id: 'thor' },
 { show: showWumpus, id: 'wumpus' },
 { show: showBen, id: 'ben' },
-{ show: showBenten, id: 'benten' }
+{ show: showBenten, id: 'benten' },
+{ show: showDustin, id: 'dustin' }
 ].filter(item => item.show);
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
