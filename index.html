@@ -234,7 +234,8 @@
         <button class="tab-btn" id="btn-jessie" onclick="openTab(event, 'jessie')">Jessie</button>
         <button class="tab-btn" id="btn-slinky" onclick="openTab(event, 'slinky')">Slinky</button>
          <button class="tab-btn" id="btn-sentry" onclick="openTab(event, 'sentry')">The Sentry</button>
-         <button class="tab-btn" id="btn-ash" onclick="openTab(event, 'ash')">Ash</button>
+         <button class="tab-btn" id="btn-ash" onclick="openTab(event, 'ash')">Ash Ketchum</button>
+        <button class="tab-btn" id="btn-delia" onclick="openTab(event, 'delia')">Delia Ketchum</button>
     </div>
 
     <div class="tab-content">
@@ -567,10 +568,28 @@
                     <h2>Ash Ketchum</h2>
                     <h3>Pokemon</h3>
                     <p>Ash Ketchum is a legendary Pokémon Trainer and the protagonist of the Pokémon anime series who hails from Pallet Town of Kanto region. Becoming a Pokémon Master is the biggest dream of Ash Ketchum, and his amazing journey starts when Professor Oak gifts him his first Pokémon which is Pikachu. Though Pikachu is a difficult Pokémon in the beginning, both of them soon become good friends and form one of the best duo in Pokémon franchise. Some of the best traits of Ash are his bravery, energy, determination, kindness and loyalty towards his friends and Pokémon. Over the years, he has traveled through several regions including Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos and Alola where he met new people and Pokémon. Ash is never discouraged by losses but instead learns from his mistakes and strives to be a better Pokémon Trainer. He has made close bonds with several Pokémon including Pikachu, Charizard, Greninja, Infernape, Sceptile, Lucario and others and treats them as friends rather than just tools for battle. Ash has accomplished many great things in his life and some of his accomplishments include winning the Alola, Orange Islands leage and Master 8 tournament.</p>
+                    <p>Ash Ketchum is Voiced by: Veronica Taylor and Sarah Natochenny</p>
+                    <p>Bruh Ash broke my code last time 💀💀💀💀💀 </p>
                     <h6>Ash Ketchum is owned by Nintendo.</h6>
                 </div>
             </div>
         </div>
+
+
+      <div id="delia" class="content-panel">
+            <div class="character-card">
+                
+       <img src="https://i.pinimg.com/736x/05/18/d2/0518d26a2c2902a88a6d271c6ea46a82.jpg" alt="Ash" class="char-image">
+                <div class="char-info">
+                    <h2>Delia Ketchum</h2>
+                    <h3>Pokemon</h3>
+                    <p>The mother of Ash Ketchum is named Delia Ketchum, a cheerful, warm-hearted lady that resides in the city of Pallet Town in the region of Kanto. She is a very caring woman that has a lot of love for her son, even though most of Ash's time is spent travelling in the Pokémon world throughout his quests. In the series, she can be seen as a devoted mother figure that always cares about Ash's wellbeing but supports him in all his endeavours and dreams. She is cheerful and lively, responsible and kind, and a good housekeeper and cook, which gives the impression of a perfect homemaker. There is a special connection between Ash and his mother, and the two keep in touch throughout the travels of Ash. Delia lives with Mr. Mime in her home. Delia always takes pride in Ash's accomplishments, and tries to help him out if he meets some obstacles. She also has a strong relation with Pikachu and treats it just like one of her family members. Even though at times she misses her son and wishes that he would come back home, Delia knows the importance of Ash's travels for him.</p>
+                    <p>Delia Ketchum is Voiced by: Veronica Taylor and Sarah Natochenny</p>
+                 <h6>Delia Ketchum is owned by Nintendo.</h6>
+                </div>
+            </div>
+        </div>
+
 
 
     
@@ -624,7 +643,7 @@
         const spidermanBtn = document.getElementById('btn-spiderman');
          const sentryBtn = document.getElementById('btn-sentry');
             const ashBtn = document.getElementById('btn-ash');
-        
+           const deliaBtn = document.getElementById('btn-delia');
 
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
@@ -650,6 +669,7 @@
             spidermanBtn.style.display = "block";
             sentryBtn.style.display = "block";
              ashBtn.style.display = "block";
+                deliaBtn.style.display = "block";
             openTab(null, 'intro');
             return;
         }
@@ -677,6 +697,9 @@
         let showSpiderman = "spiderman".includes(input) || "marvel".includes(input) || "peter parker".includes(input) || "marvel".includes(input) || "tasm".includes(input) || "mcu".includes(input) || "spiderverse".includes(input) || "spider-verse".includes(input) || "miles".includes(input)
          let showSentry = "sentry".includes(input) || "bob".includes(input) || "robert".includes(input) || "marvel".includes(input);
          let showAsh = "ash".includes(input) || "pokemon".includes(input) || "ash ketchum".includes(input);
+             let showDelia = "delia".includes(input) || "delia ketchum".includes(input) || "pokemon".includes(input) || "ash".includes(input) || "ketchum".includes(input);
+       
+        
         // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
         capBtn.style.display = showCap ? "block" : "none";
@@ -700,6 +723,7 @@
         spidermanBtn.style.display = showSpiderman ? "block" : "none";
         sentryBtn.style.display = showSentry ? "block" : "none";
         ashBtn.style.display = showAsh ? "block" : "none";
+        deliaBtn.style.display = showDelia ? "block" : "none";
         
         const activeMatches = [
             { show: showIron, id: 'ironman' },
@@ -720,12 +744,15 @@
             { show: showEniac, id: 'eniac' },
             { show: showJax, id: 'jax' },
             { show: showZooble, id: 'zooble' },
-              { show: showRagatha, id: 'ragatha' },
-                { show: showSpiderman, id: 'spiderman' },
-    { show: showSentry, id: 'sentry' },
-    { show: showAsh, id: 'ash' }
+             { show: showRagatha, id: 'ragatha' },
+{ show: showSpiderman, id: 'spiderman' },
+{ show: showSentry, id: 'sentry' },
+{ show: showAsh, id: 'ash' },
+{ show: showDelia, id: 'delia' }
+].filter(item => item.show);
         
-        ].filter(item => item.show);
+            
+      
 
         // If there's exactly one match, navigate to it automatically
         if (activeMatches.length === 1) {
