@@ -234,6 +234,7 @@
         <button class="tab-btn" id="btn-jessie" onclick="openTab(event, 'jessie')">Jessie</button>
         <button class="tab-btn" id="btn-slinky" onclick="openTab(event, 'slinky')">Slinky</button>
          <button class="tab-btn" id="btn-sentry" onclick="openTab(event, 'sentry')">The Sentry</button>
+           <button class="tab-btn" id="btn-ash" onclick="openTab(event, 'ash')">Ash</button>
     </div>
 
     <div class="tab-content">
@@ -558,6 +559,20 @@
             </div>
         </div>
 
+       <div id="ash" class="content-panel">
+            <div class="character-card">
+               
+                 <img src="https://i.pinimg.com/736x/68/fc/12/68fc1248fda273b27cc7c3945753b478.jpg" alt="Ash" class="char-image">
+                <div class="char-info">
+                    <h2>Ash Ketchum</h2>
+                    <h3>Pokemon</h3>
+                    <p>Ash Ketchum is a legendary Pokémon Trainer and the protagonist of the Pokémon anime series who hails from Pallet Town of Kanto region. Becoming a Pokémon Master is the biggest dream of Ash Ketchum, and his amazing journey starts when Professor Oak gifts him his first Pokémon which is Pikachu. Though Pikachu is a difficult Pokémon in the beginning, both of them soon become good friends and form one of the best duo in Pokémon franchise. Some of the best traits of Ash are his bravery, energy, determination, kindness and loyalty towards his friends and Pokémon. Over the years, he has traveled through several regions including Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos and Alola where he met new people and Pokémon. Ash is never discouraged by losses but instead learns from his mistakes and strives to be a better Pokémon Trainer. He has made close bonds with several Pokémon including Pikachu, Charizard, Greninja, Infernape, Sceptile, Lucario and others and treats them as friends rather than just tools for battle. Ash has accomplished many great things in his life and some of his accomplishments include winning the Alola, Orange Islands leage and Master 8 tournament.</p>
+                    <h6>Ash Ketchum is owned by Nintendo.</h6>
+                </div>
+            </div>
+        </div>
+
+
     
 <script>
     // Function to handle manual tab switching
@@ -608,6 +623,7 @@
         const ragathaBtn = document.getElementById('btn-ragatha');
         const spidermanBtn = document.getElementById('btn-spiderman');
          const sentryBtn = document.getElementById('btn-sentry');
+            const ashBtn = document.getElementById('btn-ash');
         
 
         // If search bar is cleared, restore all buttons and return to welcome panel
@@ -633,6 +649,7 @@
             ragathaBtn.style.display = "block";
             spidermanBtn.style.display = "block";
             sentryBtn.style.display = "block";
+             ashBtn.style.display = "block";
             openTab(null, 'intro');
             return;
         }
@@ -657,8 +674,9 @@
         let showJax = "jax".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showZooble = "zooble".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
         let showRagatha = "ragatha".includes(input) || "tadc".includes(input) || "digital circus".includes(input);
-        let showSpiderman = "spiderman".includes(input) || "marvel".includes(input) || "peter parker".includes(input) || "marvel".includes(input) || "tasm".includes(input) || "mcu".includes(input) || "spiderverse".includes(input) || "spider-verse".includes(input) || "miles".includes(input);
-             let showSentry = "sentry".includes(input) || "bob".includes(input) || "robert".includes(input) || "marvel".includes(input);
+        let showSpiderman = "spiderman".includes(input) || "marvel".includes(input) || "peter parker".includes(input) || "marvel".includes(input) || "tasm".includes(input) || "mcu".includes(input) || "spiderverse".includes(input) || "spider-verse".includes(input) || "miles".includes(input)
+         let showSentry = "sentry".includes(input) || "bob".includes(input) || "robert".includes(input) || "marvel".includes(input);
+         let showAsh = "ash".includes(input) || "pokemon".includes(input) || "ash ketchum".includes(input);
         // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
         capBtn.style.display = showCap ? "block" : "none";
@@ -681,6 +699,7 @@
         ragathaBtn.style.display = showRagatha ? "block" : "none";
         spidermanBtn.style.display = showSpiderman ? "block" : "none";
         sentryBtn.style.display = showSentry ? "block" : "none";
+        ashBtn.style.display = showAsh ? "block" : "none";
         
         const activeMatches = [
             { show: showIron, id: 'ironman' },
@@ -704,6 +723,9 @@
             { show: showRagatha, id: 'ragatha' },
             { show: showSpiderman, id: 'spiderman' },
                         { show: showSentry, id: 'sentry' }
+            { show: showAsh, id: 'ash' }
+        
+        
         ].filter(item => item.show);
 
         // If there's exactly one match, navigate to it automatically
