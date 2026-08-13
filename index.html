@@ -236,7 +236,7 @@
          <button class="tab-btn" id="btn-sentry" onclick="openTab(event, 'sentry')">The Sentry</button>
          <button class="tab-btn" id="btn-ash" onclick="openTab(event, 'ash')">Ash Ketchum</button>
         <button class="tab-btn" id="btn-delia" onclick="openTab(event, 'delia')">Delia Ketchum</button>
-            <button class="tab-btn" id="btn-dad" onclick="openTab(event, 'dad')">Dad Ketchum</button>
+            <button class="tab-btn" id="btn-ketchum" onclick="openTab(event, 'ketchum')">Dad Ketchum</button>
     </div>
 
     <div class="tab-content">
@@ -715,7 +715,7 @@
          let showSentry = "sentry".includes(input) || "bob".includes(input) || "robert".includes(input) || "marvel".includes(input);
          let showAsh = "ash".includes(input) || "pokemon".includes(input) || "ash ketchum".includes(input);
              let showDelia = "delia".includes(input) || "delia ketchum".includes(input) || "pokemon".includes(input) || "ash".includes(input) || "ketchum".includes(input);
-        let showKetchum = "pokemon".includes(input);
+        let showKetchum = "ketchum".includes(input) || "ash ketchum".includes(input) || "pokemon".includes(input);
         
         // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
