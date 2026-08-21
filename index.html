@@ -247,7 +247,9 @@
         <button class="tab-btn" id="btn-delia" onclick="openTab(event, 'delia')">Delia Ketchum</button>
             <button class="tab-btn" id="btn-ketchum" onclick="openTab(event, 'ketchum')">Dad Ketchum</button>
            <button class="tab-btn" id="btn-brock" onclick="openTab(event, 'brock')">Brock</button>
+         <button class="tab-btn" id="btn-serena" onclick="openTab(event, 'serena')">Serena</button>
     </div>
+    
 
     <div class="tab-content">
         
@@ -642,6 +644,29 @@ What makes Brock stand out is how dependable he is. He doesn’t always get the 
             </div>
         </div>
 
+    <div id="serena" class="content-panel">
+            <div class="character-card">
+                <img src="https://i.pinimg.com/736x/db/62/ce/db62ce48220328e4f8f5861a5c529c48.jpg" alt="Br" class="char-image">
+                <div class="char-info">
+                    <h2>Serena</h2>
+                    <h3>Pokemon</h3>
+                    <p>Serena, a skilled Pokemon Trainer working from the Kalos region, is also one of Ash’s closest companions. She is a lovely person and tries to give a helping hand to her fellow Pokemon Trainers as much as possible. Serena meets Ash while still a child and afterwards travels with him in Kalos.
+
+
+While traveling, Serena realizes that her aim is to become a Pokemon Performer and trains hard in order to reach her goal. Her main Pokemons include Fenechin, Braixen, Sylveon, Pancham and Eevee.
+
+
+Occasionally, Serena seems to be quiet and shy at certain moments, but the journey helps her to grow more confident. With every step she takes, Serena learns from her mistakes, works hard and never quits even if the situation gets difficult. She is also a generous friend who always supports Ash and the group of trainers.
+
+
+The best thing about Serena is that she evolves greatly during the adventures with Ash. While starting her journey, she has no idea what she wants to achieve in her life, but eventually figures it out.</p>
+                    <p> Serena is voiced is Haven Paschall</p>
+                    <h6>Serena is owned by Nintendo, and GAME FREAK.</h6>
+                </div>
+            </div>
+        </div>
+
+
 
     
 <script>
@@ -697,6 +722,7 @@ What makes Brock stand out is how dependable he is. He doesn’t always get the 
            const deliaBtn = document.getElementById('btn-delia');
            const ketchumBtn = document.getElementById('btn-ketchum');
            const brockBtn = document.getElementById('btn-brock');
+         const serenaBtn = document.getElementById('btn-serena');
         
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
@@ -725,6 +751,7 @@ What makes Brock stand out is how dependable he is. He doesn’t always get the 
                 deliaBtn.style.display = "block";
              ketchumBtn.style.display = "block";
              brockBtn.style.display = "block";
+              serenaBtn.style.display = "block";
             openTab(null, 'intro');
             return;
         }
@@ -755,6 +782,7 @@ What makes Brock stand out is how dependable he is. He doesn’t always get the 
              let showDelia = "delia".includes(input) || "delia ketchum".includes(input) || "pokemon".includes(input);
         let showKetchum = "pokemon".includes(input);
            let showBrock = "brock".includes(input) || "pokemon".includes(input) || "brock harrison".includes(input);
+         let showSerena = "serena".includes(input) || "pokemon".includes(input) || "pokegirl".includes(input);
         
         // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
@@ -782,6 +810,7 @@ What makes Brock stand out is how dependable he is. He doesn’t always get the 
         deliaBtn.style.display = showDelia ? "block" : "none";
          ketchumBtn.style.display = showKetchum ? "block" : "none";
          brockBtn.style.display = showBrock ? "block" : "none";
+         serenaBtn.style.display = showSerena ? "block" : "none";
         
         const activeMatches = [
             { show: showIron, id: 'ironman' },
@@ -808,7 +837,8 @@ What makes Brock stand out is how dependable he is. He doesn’t always get the 
 { show: showAsh, id: 'ash' },
 { show: showDelia, id: 'delia' },
 { show: showKetchum, id: 'ketchum' },
-{ show: showBrock, id: 'brock' }
+{ show: showBrock, id: 'brock' },
+{ show: showSerena, id: 'serena' }
                 
 ].filter(item => item.show);
         
