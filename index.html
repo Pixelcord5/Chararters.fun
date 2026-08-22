@@ -248,6 +248,7 @@
             <button class="tab-btn" id="btn-ketchum" onclick="openTab(event, 'ketchum')">Dad Ketchum</button>
            <button class="tab-btn" id="btn-brock" onclick="openTab(event, 'brock')">Brock</button>
          <button class="tab-btn" id="btn-serena" onclick="openTab(event, 'serena')">Serena</button>
+         <button class="tab-btn" id="btn-clemont" onclick="openTab(event, 'clemont')">Clemont</button>
     </div>
     
 
@@ -666,6 +667,22 @@ The best thing about Serena is that she evolves greatly during the adventures wi
             </div>
         </div>
 
+    <div id="clemont" class="content-panel">
+            <div class="character-card">
+                <img src="https://i.pinimg.com/736x/6a/2e/66/6a2e66017aa03595a0b4f34e8d2cdf40.jpg" alt="clemont" class="char-image">
+                <div class="char-info">
+                    <h2>Clemont</h2>
+                    <h3>Pokemon</h3>
+                    <p>Clemont is an exceptional young inventor, scientist, and the Gym Leader of Lumiose City in the Kalos region. The character travels together with Ash Ketchum, Serena, and his younger sister Bonnie through their travels in Kalos. Being an intelligent person with the love for technology, Clemont creates many machines and inventions that aid him and his friends as well as their Pokémon. Sometimes, however, those inventions do not go as planned and cause amusing situations.
+
+Despite being very intelligent, Clemont can be very shy, nervous, and insecure, particularly in challenging situations. During the further development of the character, he learns to become confident and to rely on himself. Clemont is a kindhearted, responsible person, and he is always there to help his friends.
+
+Being the Gym Leader of Lumiose City in the Kalos region, Clemont focuses on Electric-type Pokémon. Clemont is also a great strategist who has such Pokémon as Bunnelby, Heliolisk, and Luxray. He uses his knowledge about science as well as experience in fighting to come up with great battle tactics.</p>
+                    <p> Clemont is voiced by Mike Liscio (Michael Liscio Jr.)</p>
+                    <h6>Clemont is owned by Nintendo, and GAME FREAK.</h6>
+                </div>
+            </div>
+        </div>
 
 
     
@@ -723,6 +740,7 @@ The best thing about Serena is that she evolves greatly during the adventures wi
            const ketchumBtn = document.getElementById('btn-ketchum');
            const brockBtn = document.getElementById('btn-brock');
          const serenaBtn = document.getElementById('btn-serena');
+           const clemontBtn = document.getElementById('btn-clemont');
         
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
@@ -752,6 +770,7 @@ The best thing about Serena is that she evolves greatly during the adventures wi
              ketchumBtn.style.display = "block";
              brockBtn.style.display = "block";
               serenaBtn.style.display = "block";
+              clemontBtn.style.display = "block";
             openTab(null, 'intro');
             return;
         }
@@ -783,6 +802,7 @@ The best thing about Serena is that she evolves greatly during the adventures wi
         let showKetchum = "pokemon".includes(input);
            let showBrock = "brock".includes(input) || "pokemon".includes(input) || "brock harrison".includes(input);
          let showSerena = "serena".includes(input) || "pokemon".includes(input) || "pokegirl".includes(input);
+         let showClemont = "clemont".includes(input) || "pokemon".includes(input) || "clemontic gear".includes(input);
         
         // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
@@ -811,6 +831,7 @@ The best thing about Serena is that she evolves greatly during the adventures wi
          ketchumBtn.style.display = showKetchum ? "block" : "none";
          brockBtn.style.display = showBrock ? "block" : "none";
          serenaBtn.style.display = showSerena ? "block" : "none";
+        clemontBtn.style.display = showClemont ? "block" : "none";
         
         const activeMatches = [
             { show: showIron, id: 'ironman' },
@@ -838,7 +859,8 @@ The best thing about Serena is that she evolves greatly during the adventures wi
 { show: showDelia, id: 'delia' },
 { show: showKetchum, id: 'ketchum' },
 { show: showBrock, id: 'brock' },
-{ show: showSerena, id: 'serena' }
+{ show: showSerena, id: 'serena' },
+{ show: showClemont, id: 'clemont' }
                 
 ].filter(item => item.show);
         
