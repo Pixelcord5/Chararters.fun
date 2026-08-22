@@ -639,6 +639,14 @@ Brock can be serious when he needs to be, but he also has a goofy side. His obse
 
 What makes Brock stand out is how dependable he is. He doesn’t always get the spotlight, but he is often the one keeping everyone together. He cares about his friends, loves Pokémon, and keeps working toward his dream. That mix of kindness, humor, and responsibility is what makes Brock such a memorable Pokémon character.
 </p>
+                    <p> He Apears in Pokémon Indigo League
+Pokémon Gold and Silver 
+Pokémon Ruby and Sapphire 
+Pokémon Diamond and Pearl 
+Pokémon Black & White 
+Pokémon Sun & Moon
+Pokémon Journeys
+Pokemon Ultimate Journeys</p>
                     <p> Brock is voiced by Eric Stuart, Bill Rogers</p>
                     <h6>Brock is owned by Nintendo, and GAME FREAK.</h6>
                 </div>
@@ -660,8 +668,8 @@ While traveling, Serena realizes that her aim is to become a Pokemon Performer a
 Occasionally, Serena seems to be quiet and shy at certain moments, but the journey helps her to grow more confident. With every step she takes, Serena learns from her mistakes, works hard and never quits even if the situation gets difficult. She is also a generous friend who always supports Ash and the group of trainers.
 
 
-The best thing about Serena is that she evolves greatly during the adventures with Ash. While starting her journey, she has no idea what she wants to achieve in her life, but eventually figures it out.</p>
-                    <p> Serena is voiced is Haven Paschall</p>
+The best thing about Serena is that she evolves greatly during the adventures with Ash. While starting her journey, she has no idea what she wants to achieve in her life, but eventually figures it out.</p> <p> Serena is voiced is Haven Paschall</p>
+                   <P>She appears in Pokemon XY Kalos Quest, Pokemon XY, Pokemon XYZ, Pokemon Master Journeys and Pokemon Ultimate Journeys</P> 
                     <h6>Serena is owned by Nintendo, and GAME FREAK.</h6>
                 </div>
             </div>
@@ -678,8 +686,27 @@ The best thing about Serena is that she evolves greatly during the adventures wi
 Despite being very intelligent, Clemont can be very shy, nervous, and insecure, particularly in challenging situations. During the further development of the character, he learns to become confident and to rely on himself. Clemont is a kindhearted, responsible person, and he is always there to help his friends.
 
 Being the Gym Leader of Lumiose City in the Kalos region, Clemont focuses on Electric-type Pokémon. Clemont is also a great strategist who has such Pokémon as Bunnelby, Heliolisk, and Luxray. He uses his knowledge about science as well as experience in fighting to come up with great battle tactics.</p>
-                    <p> Clemont is voiced by Mike Liscio (Michael Liscio Jr.)</p>
+                  <p> Clemont is voiced by Mike Liscio (Michael Liscio Jr.)</p>
+                    <P>He Appears in Pokemon XY Kalos Quest, Pokemon XY, Pokemon XYZ, Pokemon Journeys, Pokemon Ultimate Journeys</P>
                     <h6>Clemont is owned by Nintendo, and GAME FREAK.</h6>
+                </div>
+            </div>
+        </div>
+
+    <div id="bonnie" class="content-panel">
+            <div class="character-card">
+                <img src="https://i.pinimg.com/736x/a8/7c/7b/a87c7b5ea84871989bac540399030ba7.jpg" alt="cl" class="char-image">
+                <div class="char-info">
+                    <h2>Bonnie</h2>
+                    <h3>Pokemon</h3>
+                    <p>Bonnie is the young and active sister of Clemont, who is a part of the team of Ash Ketchum that travels through the Kalos region. She moves together with Ash, Serena and Clemont, and brings a lot of energy to the group. Despite being young, she is very kind towards the Pokémon and quickly becomes good friends with the Pokémon she encounters on her way.
+
+Bonnie is especially close to Clemont's Bunnelby and constantly demonstrates her affection to the Pokémon. The girl is constantly asking her brother to catch a Pokémon for her when she grows up. This results in a number of hilarious situations. The character can be considered curious, stubborn, naughty, and even a little impatient, but her kind nature and desire to help her friends make her a good person.
+
+Also, Bonnie has a good relationship with her brother Clemont, who protects her. Bonnie constantly encourages him when he starts doubting himself. As for Clemont, he tries to protect her from any danger. While moving through the Kalos region, Bonnie becomes more responsible, knowledgeable and experienced concerning Pokémon.</p>
+                    <p>She appears in Pokemon XY, Pokemon XY Kalos Quest, Pokemon Journeys and Pokemon Ultimate Journeys</p>
+                    <p> Bonnie is voiced by Alyson Leigh Rosenfeld</p>
+                    <h6>Bonnie is owned by Nintendo, and GAME FREAK.</h6>
                 </div>
             </div>
         </div>
@@ -741,6 +768,8 @@ Being the Gym Leader of Lumiose City in the Kalos region, Clemont focuses on Ele
            const brockBtn = document.getElementById('btn-brock');
          const serenaBtn = document.getElementById('btn-serena');
            const clemontBtn = document.getElementById('btn-clemont');
+          const bonnieBtn = document.getElementById('btn-bonnie');
+        
         
         // If search bar is cleared, restore all buttons and return to welcome panel
         if (input === "") {
@@ -771,6 +800,7 @@ Being the Gym Leader of Lumiose City in the Kalos region, Clemont focuses on Ele
              brockBtn.style.display = "block";
               serenaBtn.style.display = "block";
               clemontBtn.style.display = "block";
+                          bonnieBtn.style.display = "block";
             openTab(null, 'intro');
             return;
         }
@@ -803,6 +833,7 @@ Being the Gym Leader of Lumiose City in the Kalos region, Clemont focuses on Ele
            let showBrock = "brock".includes(input) || "pokemon".includes(input) || "brock harrison".includes(input);
          let showSerena = "serena".includes(input) || "pokemon".includes(input) || "pokegirl".includes(input);
          let showClemont = "clemont".includes(input) || "pokemon".includes(input) || "clemontic gear".includes(input);
+let showBonnie = "bonnie".includes(input) || "pokemon".includes(input) || "clemontic gear".includes(input);
         
         // Toggle navigation button visibilities
         ironBtn.style.display = showIron ? "block" : "none";
